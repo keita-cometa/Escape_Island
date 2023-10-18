@@ -4,11 +4,24 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    bool isMoving; // 移動中判定
+    // 移動中判定
+    bool isMoving; 
 
     Vector2 input;
 
+    //移動スピード
     [SerializeField] float moveSpeed;
+
+    //ほかのオブジェクトがないかの判定
+    bool other_obj;
+
+    //X軸の移動範囲
+    [SerializeField] private float min_x = -8.0f;
+    [SerializeField] private float max_x = 8.0f;
+
+    //Y軸の移動範囲
+    [SerializeField] private float min_y = -4.5f;
+    [SerializeField] private float max_y = 4.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +45,9 @@ public class PlayerController : MonoBehaviour
                 // 入力があった分を目的地にする
                 Vector2 targetPos = transform.position;
                 targetPos += input;
+
+                
+                if(!other_obj)
                 StartCoroutine(Move(targetPos));
             }
         }
@@ -55,6 +71,11 @@ public class PlayerController : MonoBehaviour
         // 移動処理が完了したら目的地に到着させる
         transform.position = targetPos;
         isMoving = false;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        other_obj = true;
     }
 
 }
