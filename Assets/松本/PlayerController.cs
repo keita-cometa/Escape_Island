@@ -5,21 +5,23 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     // 移動中判定
-    bool isMoving; 
+    bool isMoving;
+
+    //ほかのオブジェクトがないかの判定
+    bool other_obj;
+    public LayerMask WallLayer;
 
     Vector2 input;
-    Transform player;
 
     //移動スピード
     [SerializeField] float moveSpeed;
 
-    //ほかのオブジェクトがないかの判定
-    bool other_obj;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        player= GameObject.Find ("Hero").transform;
+        
     }
 
     // Update is called once per frame
@@ -42,20 +44,18 @@ public class PlayerController : MonoBehaviour
                 Vector2 targetPos = transform.position;
                 targetPos += input;
 
-                Vector2 target_v = new Vector2(targetPos.x, targetPos.y);
-                Vector2 Hero_pos = new Vector2(player.position.x, player.position.y);
 
-                //Rayの作成
-                Ray2D ray = new Ray2D(Hero_pos, target_v);
-                //Raycastの作成
-                RaycastHit2D hit= Physics2D.Raycast(ray.origin, ray.direction, 2.0f);
+                //他のコライダーがないかの判定
+                if(input.y<0)
+                    other_obj = Physics2D.Linecast(transform.position, transform.position - (transform.up * 2.0f), WallLayer);//下方向
+                else if(input.y>0)
+                    other_obj = Physics2D.Linecast(transform.position, transform.position + (transform.up * 2.0f), WallLayer);//上方向
+                else if (input.x < 0)
+                    other_obj = Physics2D.Linecast(transform.position - (transform.right * 2.0f), transform.position,WallLayer);//左方向
+                else if (input.x > 0)
+                    other_obj = Physics2D.Linecast(transform.position + (transform.right * 2.0f), transform.position, WallLayer);//右方向
 
-                //Rayが当たった時判定をtrueにする
-                if (hit)
-                {
-                    other_obj = true;
-                }
-               
+
                 //ほかのコライダーがないとき移動を開始する
                 if (!other_obj)
                 StartCoroutine(Move(targetPos));
