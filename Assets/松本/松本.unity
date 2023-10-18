@@ -626,7 +626,6 @@ GameObject:
   - component: {fileID: 520600125}
   - component: {fileID: 520600127}
   - component: {fileID: 520600129}
-  - component: {fileID: 520600130}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Player
@@ -714,10 +713,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2
-  min_x: -8
-  max_x: 3
-  min_y: -4.5
-  max_y: 4.5
 --- !u!50 &520600129
 Rigidbody2D:
   serializedVersion: 4
@@ -739,32 +734,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &520600130
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 520600124}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.00800699, y: -0.0040037036}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.4483811, y: 1.4243611}
-  m_EdgeRadius: 0
 --- !u!1001 &528719216
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2000,10 +1969,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.06762004, y: 0.11516571}
+  m_Offset: {x: -0.02414751, y: 0.077124834}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2014,7 +1983,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.181179, y: 8.333128}
+  m_Size: {x: 6.3077745, y: 6.53375}
   m_EdgeRadius: 0
 --- !u!1001 &2041590877
 PrefabInstance:
