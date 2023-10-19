@@ -34,8 +34,8 @@ public class PlayerController : MonoBehaviour
             other_obj = false;
 
             // ƒL[ƒ{[ƒh‚Ì“ü—Íî•ñ‚ğinput‚ÉŠi”[
-            input.x = Input.GetAxisRaw("Horizontal")*2.05f; // ‰¡•ûŒü
-            input.y = Input.GetAxisRaw("Vertical")*2.05f;  // c•ûŒü
+            input.x = Input.GetAxisRaw("Horizontal")*2.0f; // ‰¡•ûŒü
+            input.y = Input.GetAxisRaw("Vertical")*2.0f;  // c•ûŒü
 
             // “ü—Í‚ª‚ ‚Á‚½
             if (input != Vector2.zero)

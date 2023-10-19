@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/\u677E\u672C/BattleScene.unity"
     guid: 20687b0d883d58444964f1f4f4691f0f
+  - enabled: 1
+    path: "Assets/\u677E\u672C/MainScene2.unity"
+    guid: d8a8a4a1ed09b594c8ba8b7fe2bc6adc
   m_configObjects: {}
