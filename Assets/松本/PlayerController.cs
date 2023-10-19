@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    // 移動中判定
-    bool isMoving;
+    
+    bool isMoving;// 移動中判定
 
-    //ほかのオブジェクトがないかの判定
-    bool other_obj;
-    public LayerMask WallLayer;
+    bool other_obj;//ほかのオブジェクトがないかの判定
+    public LayerMask WallLayer;//WallLayerを設定
 
     Vector2 input;
 
