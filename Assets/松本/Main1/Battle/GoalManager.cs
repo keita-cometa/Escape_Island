@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class GoalManager : MonoBehaviour
 {
-    public int TouchsingB.goalnum;//クリアに必要な個数
+    public int goalnum;//クリアに必要な個数
     public string sceneName;//読み込むシーン名
 
     public Text Goaltext;//クリア個数テキスト
@@ -21,10 +21,10 @@ public class GoalManager : MonoBehaviour
     void Update()
     {
         //目標個数表示
-        Goaltext.text = TouchsingB.goalnum.ToString("0");
+        Goaltext.text = goalnum.ToString("0");
 
         //goalnumが0になったらクリア関数を呼び出す
-        if(TouchsingB.goalnum == 0)
+        if(goalnum == 0)
         {
             Clear();
         }
