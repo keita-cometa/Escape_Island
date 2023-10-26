@@ -8,7 +8,7 @@ public class NextButtan : MonoBehaviour
 
         public void SwitchScene()
         {
-            SceneManager.LoadScene("MainScene", LoadSceneMode.Single);
+            SceneManager.LoadScene("MainScene1", LoadSceneMode.Single);
         }
 }
    

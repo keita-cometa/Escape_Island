@@ -20,18 +20,21 @@ public class SignA : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (StartC.onclick)
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit2D hitSprite = Physics2D.Raycast((Vector2)ray.origin, (Vector2)ray.direction);
-            if (hitSprite == true)
+            if (Input.GetMouseButtonDown(0))
             {
-                TouchSignA = hitSprite.transform.gameObject;
-                if (TouchSignA.tag == "signA")
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                RaycastHit2D hitSprite = Physics2D.Raycast((Vector2)ray.origin, (Vector2)ray.direction);
+                if (hitSprite == true)
                 {
-                    ClickSignA = true;
-                    TouchSignA.SetActive(false);
-                    
+                    TouchSignA = hitSprite.transform.gameObject;
+                    if (TouchSignA.tag == "signA")
+                    {
+                        ClickSignA = true;
+                        TouchSignA.SetActive(false);
+
+                    }
                 }
             }
         }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class GoalManager : MonoBehaviour
 {
-    public int goalnum;//クリアに必要な個数
+    public static bool BattleClearFlg1;//バトル１がクリアされたかどうかのフラグ
     public string sceneName;//読み込むシーン名
 
     public Text Goaltext;//クリア個数テキスト
@@ -15,16 +15,17 @@ public class GoalManager : MonoBehaviour
     void Start()
     {
         Goaltext = GetComponent<Text>();
+        BattleClearFlg1 = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         //目標個数表示
-        Goaltext.text = goalnum.ToString("0");
+        Goaltext.text = TouchsignB.goalnum.ToString("0");
 
         //goalnumが0になったらクリア関数を呼び出す
-        if(goalnum == 0)
+        if(TouchsignB.goalnum == 0)
         {
             Clear();
         }
@@ -34,5 +35,6 @@ public class GoalManager : MonoBehaviour
     void Clear()
     {
         SceneManager.LoadScene(sceneName);
+        BattleClearFlg1 = true;
     }
 }

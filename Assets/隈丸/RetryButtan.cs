@@ -7,6 +7,6 @@ public class RetryButtan : MonoBehaviour
 {
     public void SwitchScene()
     {
-        SceneManager.LoadScene("BatleScene", LoadSceneMode.Single);
+        SceneManager.LoadScene("BattleScene1", LoadSceneMode.Single);
     }
 }

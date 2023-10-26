@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    
-    bool isMoving;// 移動中判定
+    public static Vector2 HeroPosition;//主人公の位置保存用変数
+    public static bool isMoving;// 移動中判定
 
     bool other_obj;//ほかのオブジェクトがないかの判定
     public LayerMask WallLayer;//WallLayerを設定
@@ -20,7 +20,8 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(GoalManager.BattleClearFlg1)
+        transform.position = HeroPosition;
     }
 
     // Update is called once per frame
@@ -62,6 +63,7 @@ public class PlayerController : MonoBehaviour
                 
             }
         }
+        HeroPosition = this.transform.position;
     }
 
     //　コルーチンを使って徐々に目的地に近づける
@@ -83,6 +85,6 @@ public class PlayerController : MonoBehaviour
         transform.position = targetPos;
         isMoving = false;
     }
-  
 
+    
 }
