@@ -2,46 +2,58 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class spawnsignB : MonoBehaviour
 {
+
     public GameObject createPrefab;
-    public Transform Apoint;
-    public Transform Bpoint;
+    public GameObject[] SpawnPoint;
+    public GameObject TouchSignA;
     public float Spawntime;
-    public int SpawnNum;
+    public float time;
+    public bool IsSpawn;
+    
 
     // Start is called before the first frame update
+
     void Start()
     {
-        StartCoroutine(Spawn());
+        //Debug.Log("ugoiteru");
+
     }
+
     IEnumerator Spawn()
     {
-        while(true)
+        time = 8.0f;
+        while (SignA.ClickSignA)
         {
-            float y1 = Random.Range(Apoint.position.y, Bpoint.position.y);
-            float x1 = Random.Range(Apoint.position.x, Bpoint.position.x);
+            IsSpawn = true;
+            //ランダムで生成する場所の決定
+            int RandSpawn = Random.Range(0, 4);
 
+
+            //プレハブ化したオブジェクトの位置に決定した場所を入れる
+            createPrefab.transform.position = SpawnPoint[RandSpawn].transform.position;
             
-            Instantiate(createPrefab, new Vector3(x1, y1), createPrefab.transform.rotation);
-
-            float y2 = Random.Range(Apoint.position.y, Bpoint.position.y);
-            float x2 = Random.Range(Apoint.position.x, Bpoint.position.x);
-
-
-            Instantiate(createPrefab, new Vector3(x2, y2), createPrefab.transform.rotation);
-
+            //生成
+            Instantiate(createPrefab);
+            
             yield return new WaitForSeconds(Spawntime);
 
+            time -= 1.0f;
+            if(time<0)
+            {
+                TouchSignA.SetActive(true);
+                SignA.ClickSignA = false;
+                IsSpawn = false;
+            }
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(!IsSpawn)
+        StartCoroutine(Spawn());
     }
-
-    
-    
 }

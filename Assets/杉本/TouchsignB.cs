@@ -5,6 +5,8 @@ using UnityEngine;
 public class TouchsignB : MonoBehaviour
 {
     GameObject clickGameObject;
+    public static int goalnum;//目標個数
+    public int cnt;//カウント変数
     // Start is called before the first frame update   
     void Start()
     {
@@ -25,6 +27,8 @@ public class TouchsignB : MonoBehaviour
                 if(clickGameObject.tag == "signB")
                 {
                     Destroy(clickGameObject);
+                    cnt++;
+                    goalnum -= cnt;
                 }
             }
         }
