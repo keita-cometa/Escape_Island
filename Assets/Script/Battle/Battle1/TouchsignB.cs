@@ -5,12 +5,15 @@ using UnityEngine;
 public class TouchsignB : MonoBehaviour
 {
     GameObject clickGameObject;
-    public static int goalnum=10;//目標個数10個とする
+    
+    public static int goalnum=10;//目標個数
+    
     public int cnt;//カウント変数
+
     // Start is called before the first frame update   
     void Start()
     {
-          
+        
     }
 
 

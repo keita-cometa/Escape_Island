@@ -15,18 +15,20 @@ public class PlayerController : MonoBehaviour
     //移動スピード
     [SerializeField] float moveSpeed;
 
-    
+    private Animator anim = null;
 
     // Start is called before the first frame update
     void Start()
     {
         if(GoalManager.BattleClearFlg1)
-        transform.position = HeroPosition;
+        transform.position = HeroPosition;//保存した位置を開始時に呼び出す
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        //移動制御
         // 移動中だと入力を受け付けない
         if (!isMoving)
         {
@@ -63,7 +65,43 @@ public class PlayerController : MonoBehaviour
                 
             }
         }
-        HeroPosition = this.transform.position;
+        HeroPosition = this.transform.position;//現在の位置を保存する
+
+        //アニメーション制御
+        //float horizontalKey = Input.GetAxis("Horizontal");
+        //float verticalKey = Input.GetAxis("Vertical");
+
+        if (isMoving)
+        {
+            if (input.x > 0)
+            {
+                anim.SetBool("Vecright", true);
+                anim.SetBool("Vecleft", false);
+                anim.SetBool("Vecup", false);
+            }
+            else if (input.x < 0)
+            {
+                
+                anim.SetBool("Vecleft", true);
+                anim.SetBool("Vecright", false);
+                anim.SetBool("Vecup", false);
+            }
+            else if (input.y > 0)
+            {
+                anim.SetBool("Vecup", true);
+                anim.SetBool("Vecright", false);
+                anim.SetBool("Vecleft", false);
+            }
+            else if(input.y<0)
+            {
+                
+                    anim.SetBool("Vecup", false);
+                    anim.SetBool("Vecright", false);
+                    anim.SetBool("Vecleft", false);
+                
+            }
+        }
+
     }
 
     //　コルーチンを使って徐々に目的地に近づける

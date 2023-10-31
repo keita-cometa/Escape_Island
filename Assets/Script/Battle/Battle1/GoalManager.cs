@@ -9,6 +9,7 @@ public class GoalManager : MonoBehaviour
     public static bool BattleClearFlg1;//バトル１がクリアされたかどうかのフラグ
     public string sceneName;//読み込むシーン名
 
+    public int plasnum;//10に足す個数設定
     public Text Goaltext;//クリア個数テキスト
 
     // Start is called before the first frame update
@@ -16,6 +17,7 @@ public class GoalManager : MonoBehaviour
     {
         Goaltext = GetComponent<Text>();
         BattleClearFlg1 = false;
+        TouchsignB.goalnum += plasnum;
     }
 
     // Update is called once per frame
