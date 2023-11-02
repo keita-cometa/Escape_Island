@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class WolfManager : MonoBehaviour
 {
+    public HPManager hpManager;
+
     public GameObject Wolf;//オオカミ 
     public GameObject weakPoint;//しるし
     public float movespeed;//移動速度
@@ -17,16 +19,17 @@ public class WolfManager : MonoBehaviour
 
     public float keikatime;//経過時間用変数
     public float Attacktime;//攻撃を行うまでの時間設定
-    public static int PHP=10;//プレイヤーのHP変数
+    public int PHP=10;//プレイヤーのHP変数
 
+    public int WolfHP;//オオカミのHP変数
     public float activetime;//しるしがアクティブになるまでの時間
     public string sceneName;//呼び出すシーン名
 
+    public static int wolfnum;//倒したオオカミを数える用
     // Start is called before the first frame update
     void Start()
     {
         movePosition = moveRandomPosition();//オブジェクトの目的地を設定
-
     }
 
     // Update is called once per frame
@@ -35,11 +38,22 @@ public class WolfManager : MonoBehaviour
         //ゲームが始まったら
         if(StartC.onclick)
         {
-           
-            if(keikatime>Attacktime)
+            keikatime += Time.deltaTime;
+            //ウィークポイントの再表示
+            if (!WeakPoint.pointFlg)
             {
-                //プレイヤーのHPを減らす
-                PHP--;
+                
+                if (keikatime > activetime)
+                {
+                    weakPoint.SetActive(true);//再表示
+                    WeakPoint.pointFlg = true;
+                    keikatime = 0.0f;
+                }
+            }
+            if (keikatime>Attacktime)
+            {
+                hpManager.Attack();
+
                 Debug.Log("attack!");
                 //経過時間を0に戻す
                 keikatime = 0.0f;
@@ -59,23 +73,15 @@ public class WolfManager : MonoBehaviour
         //オブジェクトが, 目的地に移動する
         this.Wolf.transform.position = Vector3.MoveTowards(Wolf.transform.position, movePosition, movespeed * Time.deltaTime);
 
-        if (WeakPoint.WHP == 0)
+        if (WolfHP == 0)
         {
+            wolfnum++;
             //HPが0になったらウルフを消す
             Wolf.SetActive(false);
+
         }
 
-        //ウィークポイントの再表示
-        if (!WeakPoint.pointFlg)
-        {
-            keikatime += Time.deltaTime;//経過時間を測定
-            if (keikatime > activetime)
-            {
-                WeakPoint.pointFlg = true;
-                weakPoint.SetActive(true);//再表示
-                keikatime = 0.0f;
-            }
-        }
+        
     }
 
     private Vector3 moveRandomPosition()  
@@ -91,5 +97,10 @@ public class WolfManager : MonoBehaviour
     void GameOver()
     {
         SceneManager.LoadScene(sceneName);
+    }
+
+    public void  Damage()
+    {
+        WolfHP--;
     }
 }

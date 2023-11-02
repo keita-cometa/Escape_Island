@@ -7,6 +7,8 @@ public class HPManager : MonoBehaviour
 {
     public Text HPtext;//HPの残り表示テキスト
 
+    public WolfManager wolfManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +19,11 @@ public class HPManager : MonoBehaviour
     void Update()
     {
         //現在ののこりHP表示
-        HPtext.text = WolfManager.PHP.ToString("0");
+        HPtext.text = wolfManager.PHP.ToString("0");
+    }
+
+    public void Attack()
+    {
+        wolfManager.PHP--;
     }
 }
