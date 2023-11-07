@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class WolfManager : MonoBehaviour
 {
+    private Animator anim = null;
+
     public HPManager hpManager;
 
     public GameObject Wolf;//オオカミ 
@@ -30,6 +32,7 @@ public class WolfManager : MonoBehaviour
     void Start()
     {
         movePosition = moveRandomPosition();//オブジェクトの目的地を設定
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -48,7 +51,12 @@ public class WolfManager : MonoBehaviour
                     weakPoint.SetActive(true);//再表示
                     WeakPoint.pointFlg = true;
                     keikatime = 0.0f;
+                    anim.SetBool("Attack", false);//アニメーションをwalkに戻す
                 }
+            }
+            if(keikatime>Attacktime-1.2f)
+            {
+                anim.SetBool("Attack", true);
             }
             if (keikatime>Attacktime)
             {
@@ -57,6 +65,7 @@ public class WolfManager : MonoBehaviour
                 Debug.Log("attack!");
                 //経過時間を0に戻す
                 keikatime = 0.0f;
+                anim.SetBool("Attack", false);
                 //プレイヤーのHPが0になったらゲームオーバーを呼び出す
                 if (PHP == 0)
                 {
