@@ -6,6 +6,7 @@ TagManager:
   tags:
   - signB
   - signA
+  - Obstacles
   layers:
   - Default
   - TransparentFX
