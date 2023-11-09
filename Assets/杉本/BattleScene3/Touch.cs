@@ -20,24 +20,34 @@ public class Touch : MonoBehaviour
     public void Onclick()
     {
         Debug.Log("cilck");
+
         clickGameObject.SetActive(false);
-        StartCoroutine(Indication());
         Click = true;
+        StartCoroutine(Indication());
 
     }
     IEnumerator Indication()
     {
         yield return new WaitForSeconds(indication_time);
-        clickGameObject.transform.position = target.transform.position;
+
         clickGameObject.SetActive(true);
         Click = false;
 
+        clickGameObject.transform.position = target.transform.position;
+
     }
 
-    
+
     // Update is called once per frame
     void Update()
     {
-        
+        if (direction.obstacles == false && Click == false)
+        {
+            clickGameObject.SetActive(true);
+        }
+        else if (direction.obstacles == true || Click == true)
+        {
+            clickGameObject.SetActive(false);
+        }
     }    
 }

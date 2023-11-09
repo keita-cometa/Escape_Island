@@ -6,7 +6,7 @@ public class movepoint : MonoBehaviour
     public Transform movepointA;
     public Transform movepointB;
     public Transform target;
-    public float time;
+    private float time;
     private float vecX;
     private float vecY;
     public static Vector2 beforpos;

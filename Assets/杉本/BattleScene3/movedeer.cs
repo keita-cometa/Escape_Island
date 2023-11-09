@@ -13,21 +13,7 @@ public class movedeer : MonoBehaviour
     {
 
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Obstacles"))
-        {
-            Touch.Click = false;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if(collision.CompareTag("Obstacles"))
-        {
-            Touch.Click = true;
-        }
-    }
+    
     // Update is called once per frame
     void Update()
     {               
