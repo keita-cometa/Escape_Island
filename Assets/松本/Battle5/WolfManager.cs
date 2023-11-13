@@ -48,30 +48,33 @@ public class WolfManager : MonoBehaviour
                 
                 if (keikatime > activetime)
                 {
+                    Debug.Log("hyouzi");
                     weakPoint.SetActive(true);//再表示
                     WeakPoint.pointFlg = true;
                     keikatime = 0.0f;
                     anim.SetBool("Attack", false);//アニメーションをwalkに戻す
                 }
             }
-            if(keikatime>Attacktime-1.2f)
+            else
             {
-                anim.SetBool("Attack", true);
-            }
-            if (keikatime>Attacktime)
-            {
-                hpManager.Attack();
-
-                Debug.Log("attack!");
-                //経過時間を0に戻す
-                keikatime = 0.0f;
-                anim.SetBool("Attack", false);
-                //プレイヤーのHPが0になったらゲームオーバーを呼び出す
-                if (PHP == 0)
+                //攻撃モーション開始
+                if (keikatime > Attacktime - 1.0f)
                 {
-                    GameOver();
+                    anim.SetBool("Attack", true);
+                }
+                //オオカミの攻撃
+                if (keikatime > Attacktime)
+                {
+                    hpManager.Attack();
+
+                    
+                    //経過時間を0に戻す
+                    keikatime = 0.0f;
+                    anim.SetBool("Attack", false);
+
                 }
             }
+            
         }
         
 
@@ -81,7 +84,19 @@ public class WolfManager : MonoBehaviour
         }
         //オブジェクトが, 目的地に移動する
         this.Wolf.transform.position = Vector3.MoveTowards(Wolf.transform.position, movePosition, movespeed * Time.deltaTime);
-
+        //左右反転させたりするアニメーション
+        if(movePosition.x>Wolf.transform.position.x)
+        {
+            //右向き
+            transform.localScale = new Vector3(-1, 1, 1);
+            //anim.SetBool("Attack", false);
+        }
+        else
+        {
+            //左向き
+            transform.localScale = new Vector3(1, 1, 1);
+            //anim.SetBool("Attack", false);
+        }
         if (WolfHP == 0)
         {
             wolfnum++;

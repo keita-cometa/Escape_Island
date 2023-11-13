@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HPManager : MonoBehaviour
 {
     public Text HPtext;//HPの残り表示テキスト
 
     public WolfManager wolfManager;
+
+    public string sceneName;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +23,10 @@ public class HPManager : MonoBehaviour
     {
         //現在ののこりHP表示
         HPtext.text = wolfManager.PHP.ToString("0");
+        if(wolfManager.PHP==0)
+        {
+            SceneManager.LoadScene(sceneName);
+        }
     }
 
     public void Attack()
