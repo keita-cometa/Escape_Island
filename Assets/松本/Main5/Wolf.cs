@@ -21,13 +21,12 @@ public class Wolf : MonoBehaviour
     {
         
     }
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(!PlayerController.isMoving)
-        {
+        
             audioSource.PlayOneShot(se);
             Invoke("Load", 3.0f);
-        }
+       
     }
 
     void Load()
