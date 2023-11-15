@@ -7,7 +7,9 @@ public class WeakPoint : MonoBehaviour
     public GameObject weakPoint;//ウィークポイントオブジェクト
     public static int WHP;//オオカミのHP変数初期値10
 
-    public static bool pointFlg=true;//ポイントがアクティブかどうか判定用
+    public static bool pointFlg = true;//ポイントがアクティブかどうか判定用
+
+
     public float activetime;//アクティブになるまでの時間
 
     public WolfManager wolfManager;
@@ -34,15 +36,11 @@ public class WeakPoint : MonoBehaviour
                 if (weakPoint.tag == "weak")
                 {
                     Debug.Log("hit");
-                    pointFlg = false;
                     wolfManager.Damage();
-                    
                     //ヒットしたときウィークポイントを一時的に隠す
-                    weakPoint.SetActive(false);
-                    
-                    
-                    
+                    weakPoint.SetActive(false); 
                 }
+                
             }
         }
         

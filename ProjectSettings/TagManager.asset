@@ -7,6 +7,9 @@ TagManager:
   - signB
   - signA
   - weak
+  - weak1
+  - weak2
+  - weak3
   layers:
   - Default
   - TransparentFX

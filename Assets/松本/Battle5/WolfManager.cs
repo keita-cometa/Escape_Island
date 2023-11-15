@@ -43,14 +43,12 @@ public class WolfManager : MonoBehaviour
         {
             keikatime += Time.deltaTime;
             //ウィークポイントの再表示
-            if (!WeakPoint.pointFlg)
+            if (!weakPoint.activeInHierarchy)
             {
-                
                 if (keikatime > activetime)
                 {
                     Debug.Log("hyouzi");
                     weakPoint.SetActive(true);//再表示
-                    WeakPoint.pointFlg = true;
                     keikatime = 0.0f;
                     anim.SetBool("Attack", false);//アニメーションをwalkに戻す
                 }
