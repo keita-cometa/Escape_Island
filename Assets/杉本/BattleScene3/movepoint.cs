@@ -23,7 +23,7 @@ public class movepoint : MonoBehaviour
         beforpos = transform.position;
         MovePos();
 
-        if(Touch.Click==true)
+        if(Touch.click==true)
         {
             MovePos();
         }
@@ -38,7 +38,7 @@ public class movepoint : MonoBehaviour
 
             transform.position = new Vector2(vecX, vecY);
             afterpos = transform.position;
-            if (Touch.Click == true || transform.position==target.transform.position)
+            if (Touch.click == true || transform.position==target.transform.position)
             {
                 time = 1.0f;
             }

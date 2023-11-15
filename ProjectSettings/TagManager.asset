@@ -8,6 +8,7 @@ TagManager:
   - signA
   - Obstacles
   - wall
+  - Ground
   layers:
   - Default
   - TransparentFX
