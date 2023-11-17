@@ -25,7 +25,7 @@ public class Wolf : MonoBehaviour
     {
         
             audioSource.PlayOneShot(se);
-            Invoke("Load", 3.0f);
+            Invoke("Load", 2.0f);
        
     }
 
