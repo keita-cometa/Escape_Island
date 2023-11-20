@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -43,8 +44,7 @@ public class GameManager : MonoBehaviour
             //0”Ô‚Ì‹È‚ğÄ¶
             audioSource.clip = clips[0];
         }
-        if()
-        else
+        if(SceneManager.GetActiveScene().name=="ClearScene")
         {
             //‚P”Ô‚Ì‹È‚ğÄ¶
             audioSource.clip = clips[1];
