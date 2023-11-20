@@ -492,6 +492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: BossBattleScene5
+  Wolfs: {fileID: 228989457}
   se: {fileID: 8300000, guid: 2db30786ed46bc74cb3218ad3a7e7da3, type: 3}
 --- !u!82 &228989462
 AudioSource:
@@ -600,6 +601,7 @@ GameObject:
   - component: {fileID: 236077184}
   - component: {fileID: 236077183}
   - component: {fileID: 236077182}
+  - component: {fileID: 236077185}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -673,6 +675,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &236077185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236077181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c516b82af7e65bf47bcdd3ea11e5bfa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &360508927
 GameObject:
   m_ObjectHideFlags: 0
@@ -1132,6 +1146,8 @@ GameObject:
   m_Component:
   - component: {fileID: 699500287}
   - component: {fileID: 699500286}
+  - component: {fileID: 699500289}
+  - component: {fileID: 699500288}
   m_Layer: 0
   m_Name: "\u77E2\u5370"
   m_TagString: Untagged
@@ -1206,6 +1222,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!61 &699500288
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699500285}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &699500289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699500285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b357bc714c19404a9c5fb6328ca61eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: MainScene4
 --- !u!1 &704738265
 GameObject:
   m_ObjectHideFlags: 0
@@ -1284,6 +1339,8 @@ GameObject:
   m_Component:
   - component: {fileID: 857533178}
   - component: {fileID: 857533177}
+  - component: {fileID: 857533180}
+  - component: {fileID: 857533179}
   m_Layer: 0
   m_Name: "\u77E2\u5370 (1)"
   m_TagString: Untagged
@@ -1358,6 +1415,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!61 &857533179
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857533176}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &857533180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857533176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b357bc714c19404a9c5fb6328ca61eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: MainScene3
 --- !u!1 &871605670
 GameObject:
   m_ObjectHideFlags: 0
@@ -2103,6 +2199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: BossBattleScene5
+  Wolfs: {fileID: 1000629139}
   se: {fileID: 8300000, guid: 2db30786ed46bc74cb3218ad3a7e7da3, type: 3}
 --- !u!61 &1000629142
 BoxCollider2D:
@@ -2683,6 +2780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: BossBattleScene5
+  Wolfs: {fileID: 2068384881}
   se: {fileID: 8300000, guid: 2db30786ed46bc74cb3218ad3a7e7da3, type: 3}
 --- !u!61 &1729549859
 BoxCollider2D:

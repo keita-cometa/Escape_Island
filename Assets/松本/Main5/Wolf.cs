@@ -7,6 +7,7 @@ public class Wolf : MonoBehaviour
 {
     public string sceneName;
     private AudioSource audioSource;
+    public GameObject Wolfs;
 
     [SerializeField] private AudioClip se;
 
@@ -14,12 +15,16 @@ public class Wolf : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        Wolfs.SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(GameManager.Battele5Flg==true)
+        {
+            Wolfs.SetActive(false);
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
