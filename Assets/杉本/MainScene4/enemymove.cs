@@ -6,6 +6,7 @@ public class enemymove : MonoBehaviour
 {
     public Transform target;
     public static Vector2 HeroPosition;//主人公の位置保存用変数
+
     public static bool isMoving;// 移動中判定
 
     bool other_obj;//ほかのオブジェクトがないかの判定
@@ -36,12 +37,40 @@ public class enemymove : MonoBehaviour
             //判定の初期化
             other_obj = false;
 
+
+            Vector2 pos = transform.position;
+
             //Vector2 direction;
             input = target.position - transform.position;
-            if(input.x<input.y)
+
+
+
+
+            if (input.x >= input.y && input.x > 0) 
             {
-                input.x *= 2.0f;
+                Debug.Log("xみぎ");
+                pos.x += 2.0f;
+                pos.y += 0.0f;
             }
+            else if (input.x > input.y && input.x < 0)
+            {
+                Debug.Log("xひだり");
+                pos.x -= 2.0f;
+                pos.y += 0.0f;
+            }
+            else if (input.x <= input.y && input.y > 0)
+            {
+                Debug.Log("yうえ");
+                pos.x += 0.0f;
+                pos.y += 2.0f;
+            }
+            else if (input.x < input.y && input.y < 0)
+            {
+                Debug.Log("yした");
+                pos.x += 0.0f;
+                pos.y -= 2.0f;
+            }
+
 
             // キーボードの入力情報をinputに格納
             //input.x = Input.GetAxisRaw("Horizontal") * 2.0f; // 横方向
@@ -52,8 +81,9 @@ public class enemymove : MonoBehaviour
             if (input != Vector2.zero)
             {
                 // 入力があった分を目的地にする
+
                 Vector2 targetPos = transform.position;
-                targetPos += input;
+                targetPos += pos;
 
 
                 //他のコライダーがないかの判定
@@ -69,7 +99,7 @@ public class enemymove : MonoBehaviour
 
                 //ほかのコライダーがないとき移動を開始する
                 if (!other_obj)
-                    StartCoroutine(Move(targetPos));
+                    StartCoroutine(Move(pos));
 
 
             }
