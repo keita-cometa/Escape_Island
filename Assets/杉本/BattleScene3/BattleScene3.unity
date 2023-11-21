@@ -352,7 +352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movepointA: {fileID: 2099148900}
   movepointB: {fileID: 335358367}
-  target: {fileID: 0}
+  target: {fileID: 704141900}
 --- !u!4 &331785720
 Transform:
   m_ObjectHideFlags: 0

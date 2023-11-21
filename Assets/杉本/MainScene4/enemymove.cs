@@ -42,21 +42,29 @@ public class enemymove : MonoBehaviour
 
             //Vector2 direction;
             input = target.position - transform.position;
+            Debug.Log(target.position + "taget");
+            Debug.Log(transform.position + "enemy");
+            Debug.Log(input + "kyori");
 
 
-
-
+            if(target.position==transform.position)
+            {
+                transform.localScale = transform.localScale;//画像はそのまま
+                return;
+            }
             if (input.x >= input.y && input.x > 0) 
             {
                 Debug.Log("xみぎ");
                 pos.x += 2.0f;
                 pos.y += 0.0f;
+                transform.localScale = new Vector2(-0.3f, 0.3f);  //画像反転
             }
-            else if (input.x > input.y && input.x < 0)
+            else if (input.x < input.y && input.x < 0)
             {
                 Debug.Log("xひだり");
                 pos.x -= 2.0f;
                 pos.y += 0.0f;
+                transform.localScale = new Vector2(0.3f, 0.3f);  //画像反転
             }
             else if (input.x <= input.y && input.y > 0)
             {
@@ -64,7 +72,7 @@ public class enemymove : MonoBehaviour
                 pos.x += 0.0f;
                 pos.y += 2.0f;
             }
-            else if (input.x < input.y && input.y < 0)
+            else if (input.x > input.y && input.y < 0)
             {
                 Debug.Log("yした");
                 pos.x += 0.0f;
@@ -82,8 +90,8 @@ public class enemymove : MonoBehaviour
             {
                 // 入力があった分を目的地にする
 
-                Vector2 targetPos = transform.position;
-                targetPos += pos;
+                //Vector2 targetPos = transform.position;
+                //targetPos += pos;
 
 
                 //他のコライダーがないかの判定
