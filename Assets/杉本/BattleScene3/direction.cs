@@ -1,0 +1,57 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class direction : MonoBehaviour
+{
+    public GameObject target;//ÉâÉìÉ_ÉÄÇ»èÍèä
+    public static bool obstacles;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        obstacles = false;
+    
+    }
+
+    //è·äQï®Ç∆êGÇÍÇƒÇ¢ÇΩÇÁ
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+       
+        if (collision.CompareTag("Obstacles"))
+        {        
+            obstacles = true;
+        }
+        
+    }
+
+    //ó£ÇÍÇΩÇÁ
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        
+        if (collision.CompareTag("Obstacles"))
+        {
+            obstacles = false;
+        }
+        
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (transform.position.x < target.transform.position.x)             //é©ï™ÇÃà íuÇ™ÉâÉìÉ_ÉÄÇÃà⁄ìÆèÍèäÇÊÇËâEë§Ç»ÇÁ
+        {
+
+            transform.localScale = new Vector2(-1, 1);  //âÊëúîΩì]
+        }
+        else if (transform.position.x == target.transform.position.x)        //à⁄ìÆèÍèäÇ…Ç¬Ç¢ÇΩÇÁ
+        {
+            transform.localScale = transform.localScale;//âÊëúÇÕÇªÇÃÇ‹Ç‹
+        }
+        else                                                                //ç∂ë§Ç»ÇÁ
+        {
+            transform.localScale = new Vector2(1, 1);   //å≥ÇÃâÊëú
+        }
+    }
+}

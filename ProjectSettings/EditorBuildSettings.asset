@@ -6,15 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/MainScene1.unity
+    guid: e9adc0319c203864abf3c01bcec01ae5
   - enabled: 1
-    path: "Assets/\u5317\u7530/Map.unity"
-    guid: c2e4959937cab1c469aec7b988dd7c1a
-  - enabled: 1
-    path: "Assets/\u5317\u7530/SnakeBattle/SnakeBattle.unity"
-    guid: 83b858ccad4d19e4f898c67a59a7c23b
-  - enabled: 1
-    path: "Assets/\u5317\u7530/InosisiBattle/InosisiBattle.unity"
-    guid: f1fc362ad4bba77458d9077b60d88065
+
   m_configObjects: {}
