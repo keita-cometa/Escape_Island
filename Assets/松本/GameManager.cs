@@ -41,13 +41,23 @@ public class GameManager : MonoBehaviour
         //曲の変更
         if(meinnum==0)
         {
-            //0番の曲を再生
+            //0番の曲を再生(メイン)
             audioSource.clip = clips[0];
         }
-        if(SceneManager.GetActiveScene().name=="ClearScene")
+        if(meinnum!=0)
         {
-            //１番の曲を再生
+            //１番の曲を再生(バトル)
             audioSource.clip = clips[1];
+        }
+        if(SceneManager.GetActiveScene().name == "ClearScene")
+        {
+            //2番の曲を再生(クリアシーン)
+            audioSource.clip = clips[2];
+        }
+        if(SceneManager.GetActiveScene().name == "GameoverScene")
+        {
+            //3番の曲を再生(ゲームオーバーシーン)
+            audioSource.clip = clips[3];
         }
         
     }
