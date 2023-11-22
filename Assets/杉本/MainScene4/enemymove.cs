@@ -22,8 +22,7 @@ public class enemymove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (GoalManager.BattleClearFlg1)
-            transform.position = HeroPosition;//保存した位置を開始時に呼び出す
+
         //anim = GetComponent<Animator>();
     }
 

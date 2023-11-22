@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class ChangeScene1 : MonoBehaviour
 {
     public string sceneName;//ì«Ç›çûÇﬁÉVÅ[Éìñº
+    public int num;
+    public static int posnum;
 
     // Start is called before the first frame update
     void Start()
@@ -22,5 +24,6 @@ public class ChangeScene1 : MonoBehaviour
     public void Load()
     {
         SceneManager.LoadScene(sceneName);
+        posnum = num;
     }
 }

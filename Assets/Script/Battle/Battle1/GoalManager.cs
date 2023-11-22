@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class GoalManager : MonoBehaviour
 {
-    public static bool BattleClearFlg1;//バトル１がクリアされたかどうかのフラグ
     public string sceneName;//読み込むシーン名
 
     public int plasnum;//10に足す個数設定
@@ -16,7 +15,6 @@ public class GoalManager : MonoBehaviour
     void Start()
     {
         Goaltext = GetComponent<Text>();
-        BattleClearFlg1 = false;
         TouchsignB.goalnum += plasnum;
     }
 
@@ -37,6 +35,6 @@ public class GoalManager : MonoBehaviour
     void Clear()
     {
         SceneManager.LoadScene(sceneName);
-        BattleClearFlg1 = true;
+        GameManager.Battele1Flg = true;
     }
 }

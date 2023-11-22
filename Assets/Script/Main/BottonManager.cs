@@ -15,12 +15,16 @@ public class BottonManager : MonoBehaviour
         panel1.SetActive(false);
         panel2.SetActive(false);
         Yazirusi.SetActive(false);
+        if(GameManager.BowFlg)
+        {
+            Yazirusi.SetActive(true);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(GoalManager.BattleClearFlg1)
+        if(GameManager.Battele1Flg)
         {
             Yazirusi.SetActive(true);
         }
@@ -30,11 +34,11 @@ public class BottonManager : MonoBehaviour
     {      
         if(!PlayerController.isMoving)
         {
-            if (GoalManager.BattleClearFlg1)//バトルフラグ１がtrueになったら
+            if (GameManager.Battele1Flg)//バトルフラグ１がtrueになったら
             {
                 panel2.SetActive(true);
             }
-            if(!GoalManager.BattleClearFlg1)
+            if(!GameManager.Battele1Flg)
             {
                 panel1.SetActive(true);
             }

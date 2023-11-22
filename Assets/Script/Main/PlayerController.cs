@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public static Vector2 HeroPosition;//主人公の位置保存用変数
+    public static Vector2 HeroPosition= new Vector2(0.5f, -4.5f);//主人公の位置保存用変数
     public static bool isMoving;// 移動中判定
 
     bool other_obj;//ほかのオブジェクトがないかの判定
@@ -20,8 +20,57 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(GoalManager.BattleClearFlg1)
-        transform.position = HeroPosition;//保存した位置を開始時に呼び出す
+      
+
+        if(ChangeScene1.posnum==1)
+        {
+            transform.position = GameManager.M1_1pos;
+        }
+        else if (ChangeScene1.posnum == 2)
+        {
+            transform.position = GameManager.M2_1pos;
+        }
+        else if (ChangeScene1.posnum == 3)
+        {
+            transform.position = GameManager.M2_2pos;
+        }
+        else if (ChangeScene1.posnum == 4)
+        {
+            transform.position = GameManager.M3_1pos;
+        }
+        else if (ChangeScene1.posnum == 5)
+        {
+            transform.position = GameManager.M3_2pos;
+        }
+        else if (ChangeScene1.posnum == 6)
+        {
+            transform.position = GameManager.M3_3pos;
+        }
+        else if (ChangeScene1.posnum == 7)
+        {
+            transform.position = GameManager.M4_1pos;
+        }
+        else if (ChangeScene1.posnum == 8)
+        {
+            transform.position = GameManager.M4_2pos;
+        }
+        else if (ChangeScene1.posnum == 9)
+        {
+            transform.position = GameManager.M4_3pos;
+        }
+        else if (ChangeScene1.posnum == 10)
+        {
+            transform.position = GameManager.M5_1pos;
+        }
+        else if (ChangeScene1.posnum == 11)
+        {
+            transform.position = GameManager.M5_2pos;
+        }
+        else
+        {
+            transform.position = HeroPosition;//保存した位置を開始時に呼び出す
+        }
+        
         anim = GetComponent<Animator>();
     }
 
