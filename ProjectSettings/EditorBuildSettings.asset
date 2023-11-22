@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/ManagerScene.unity
+    guid: bae2371b5e7287c4ebb2e52d9102c273
+  - enabled: 1
     path: Assets/Scenes/MainScene1.unity
     guid: e9adc0319c203864abf3c01bcec01ae5
   - enabled: 1
@@ -15,12 +18,24 @@ EditorBuildSettings:
     path: Assets/Scenes/MainScene3.unity
     guid: e273b900c8e02094ab021d3a6f2830ae
   - enabled: 1
+    path: Assets/Scenes/MainScene4.unity
+    guid: b7d39b8684f313d44a5f9100e8d475c4
+  - enabled: 1
     path: Assets/Scenes/BattleScene1.unity
     guid: b0f5d603a7d531e4ca7c0901653d8d8e
+  - enabled: 1
+    path: Assets/Scenes/BattleScene3.unity
+    guid: d0e3b035efbbac348909c75d5b486faa
+  - enabled: 1
+    path: Assets/Scenes/InosisiBattle.unity
+    guid: f1fc362ad4bba77458d9077b60d88065
+  - enabled: 1
+    path: Assets/Scenes/SnakeBattle.unity
+    guid: 83b858ccad4d19e4f898c67a59a7c23b
   - enabled: 1
     path: Assets/Scenes/ClearScene.unity
     guid: f369212ec62d64249a4b45cef2cb0053
   - enabled: 1
-    path: Assets/Scenes/ManagerScene.unity
-    guid: bae2371b5e7287c4ebb2e52d9102c273
+    path: Assets/Scenes/GameoverScene.unity
+    guid: c5ebb257d43ae9e449a57076c74ad3f8
   m_configObjects: {}

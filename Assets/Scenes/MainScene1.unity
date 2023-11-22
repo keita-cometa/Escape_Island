@@ -1048,7 +1048,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: MainScene2
-  num: 2
+  mnum: 2
+  bnum: 0
 --- !u!114 &752196393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1626,7 +1627,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: BattleScene1
-  num: 0
+  mnum: 0
+  bnum: 1
 --- !u!1 &1481382226
 GameObject:
   m_ObjectHideFlags: 0

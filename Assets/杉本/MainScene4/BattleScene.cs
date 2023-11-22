@@ -13,9 +13,17 @@ public class BattleScene : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        Invoke("battle", 4.0f);
+        PlayerController.isMoving = true;
+        enemymove.isMoving = true;
+    }
+
+    void battle()
     {
         SceneManager.LoadScene(sceneName);
+        ChangeScene1.batnum = 5;
     }
 
     // Update is called once per frame

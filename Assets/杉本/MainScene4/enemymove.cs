@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class enemymove : MonoBehaviour
 {
@@ -17,12 +18,16 @@ public class enemymove : MonoBehaviour
     //移動スピード
     [SerializeField] float moveSpeed;
 
+    public GameObject boar;
     //private Animator anim = null;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        if(GameManager.Battele4_1Flg)
+        {
+            boar.SetActive(false);
+        }
         //anim = GetComponent<Animator>();
     }
 
@@ -136,6 +141,15 @@ public class enemymove : MonoBehaviour
         transform.position = targetPos;
         isMoving = false;
     }
-
-
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        PlayerController.isMoving = true;
+        Invoke("encount", 2.0f);
+    }
+    void encount()
+    {
+        SceneManager.LoadScene("InosisiBattle");
+        ChangeScene1.batnum = 4;
+        PlayerController.isMoving = false;
+    }
 }

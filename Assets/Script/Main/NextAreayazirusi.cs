@@ -11,11 +11,6 @@ public class NextAreayazirusi : MonoBehaviour
     void Start()
     {
         NextAreaButton.SetActive(false);
-        if(GameManager.BowFlg)
-        {
-            yazirusi.SetActive(true);
-        }
-    
     }
 
     // Update is called once per frame

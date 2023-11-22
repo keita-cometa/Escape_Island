@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class StartC : MonoBehaviour
 {
-    public static bool onclick;//クリックされたかどうか判別変数
-    public static bool starttf;
+    public static bool onclick=false;//クリックされたかどうか判別変数
+    public static bool starttf=false;
 
     public GameObject StartBotton;//スタートボタン
     public GameObject StartTimeText;//スタートタイムテキスト
@@ -17,6 +17,7 @@ public class StartC : MonoBehaviour
     {
         StartTimeText.SetActive(false);
         starttf = false;
+        onclick = false;
     }
 
     // Update is called once per frame

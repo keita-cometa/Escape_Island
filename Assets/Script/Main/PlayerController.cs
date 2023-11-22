@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public static Vector2 HeroPosition= new Vector2(0.5f, -4.5f);//主人公の位置保存用変数
+    public static Vector2 HeroPosition;//主人公の位置保存用変数    = new Vector2(0.5f, -4.5f)
     public static bool isMoving;// 移動中判定
 
     bool other_obj;//ほかのオブジェクトがないかの判定
@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            transform.position = HeroPosition;//保存した位置を開始時に呼び出す
+            //transform.position = HeroPosition;//保存した位置を開始時に呼び出す
         }
         
         anim = GetComponent<Animator>();

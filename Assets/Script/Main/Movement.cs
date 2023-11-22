@@ -2,11 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour
 {
+    public GameObject deer;
     public Transform target;
-    public static Vector2 HeroPosition;//主人公の位置保存用変数
     public static bool isMoving;// 移動中判定
 
     bool other_obj;//ほかのオブジェクトがないかの判定
@@ -24,13 +25,21 @@ public class Movement : MonoBehaviour
     Vector3 LeftUP = new Vector2(-9.5f, 3.5f);
     Vector3 LeftDown = new Vector2(-9.5f, -4.5f);
 
-    bool kadoueFlg;
-    bool kadositaFlg;
+    bool UP=false;
+    bool DOWN = false;
+    bool RIGHT = false;
+    bool LEFT = false;
+
+    //bool kadoueFlg;
+    //bool kadositaFlg;
 
     // Start is called before the first frame update
     void Start()
     {
-      
+      if(GameManager.Battele3Flg)
+        {
+            deer.SetActive(false);
+        }
         anim = GetComponent<Animator>();
     }
 
@@ -52,14 +61,14 @@ public class Movement : MonoBehaviour
             Debug.Log(input + "kyori");
 
 
-            if (transform.position == RightUP || transform.position == LeftUP)
-            {
-                kadoueFlg = true;
-            }
-            if (transform.position == RightDown || transform.position == LeftDown)
-            {
-                kadositaFlg = true;
-            }
+            //if (transform.position == RightUP || transform.position == LeftUP)
+            //{
+            //    kadoueFlg = true;
+            //}
+            //if (transform.position == RightDown || transform.position == LeftDown)
+            //{
+            //    kadositaFlg = true;
+            //}
 
             if (target.position == transform.position)
             {
@@ -71,6 +80,7 @@ public class Movement : MonoBehaviour
                 Debug.Log("xみぎ");
                 pos.x -= 2.0f;
                 pos.y += 0.0f;
+                LEFT = true;
                // transform.localScale = new Vector2(-0.3f, 0.3f);  //画像反転
             }
             else if (input.x < input.y && input.x < 0)
@@ -78,6 +88,7 @@ public class Movement : MonoBehaviour
                 Debug.Log("xひだり");
                 pos.x += 2.0f;
                 pos.y += 0.0f;
+                RIGHT = true;
                 //transform.localScale = new Vector2(0.3f, 0.3f);  //画像反転
             }
             else if (input.x <= input.y && input.y > 0)
@@ -85,12 +96,14 @@ public class Movement : MonoBehaviour
                 Debug.Log("yうえ");
                 pos.x += 0.0f;
                 pos.y -= 2.0f;
+                DOWN = true;
             }
             else if (input.x > input.y && input.y < 0)
             {
                 Debug.Log("yした");
                 pos.x += 0.0f;
                 pos.y += 2.0f;
+                UP = true;
             }
             //else if()
             //{
@@ -126,20 +139,28 @@ public class Movement : MonoBehaviour
                 Debug.Log("if");
 
                 //他のコライダーがないかの判定
-                if (input.y > 0)
-                    other_obj = Physics2D.Linecast(transform.position, transform.position - (transform.up * 2.0f), WallLayer);//下方向
-                else if (input.y <0)
-                    other_obj = Physics2D.Linecast(transform.position, transform.position + (transform.up * 2.0f), WallLayer);//上方向
-                else if (input.x > 0)
+                if (UP)
                 {
-                    other_obj = Physics2D.Linecast(transform.position - (transform.right * 2.0f), transform.position, WallLayer);//左方向
-                    Debug.Log("kabe");
+                    other_obj = Physics2D.Linecast(transform.position, transform.position + (transform.up * 2.0f), WallLayer);//上方向
+                    UP = false;
+                }  
+                else if (DOWN)
+                {
+                    other_obj = Physics2D.Linecast(transform.position, transform.position - (transform.up * 2.0f), WallLayer);//下方向
+                    DOWN = false;
                 }
-               
-                else if (input.x < 0)
+                else if (RIGHT)
                 {
                     other_obj = Physics2D.Linecast(transform.position + (transform.right * 2.0f), transform.position, WallLayer);//右方向
-                    Debug.Log("kabe");
+                    RIGHT = false;
+                    Debug.Log("migi");
+                }
+                else if (LEFT)
+                {
+                    other_obj = Physics2D.Linecast(transform.position - (transform.right * 2.0f), transform.position, WallLayer);//左方向
+                    LEFT = false;
+                    Debug.Log("hidari");
+                    Debug.Log(other_obj);
                 }
 
 
@@ -153,7 +174,6 @@ public class Movement : MonoBehaviour
 
             }
         }
-        HeroPosition = this.transform.position;//現在の位置を保存する
 
         //アニメーション制御
         //float horizontalKey = Input.GetAxis("Horizontal");
@@ -210,9 +230,20 @@ public class Movement : MonoBehaviour
         // 移動処理が完了したら目的地に到着させる
         transform.position = targetPos;
         isMoving = false;
-        kadositaFlg = false;
-        kadoueFlg = false;
+        //kadositaFlg = false;
+        //kadoueFlg = false;
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        PlayerController.isMoving = true;
+        Invoke("encount", 2.0f);
 
+    }
+    void encount()
+    {
+        SceneManager.LoadScene("BattleScene3");
+        ChangeScene1.batnum = 3;
+        PlayerController.isMoving = false;
+    }
 }

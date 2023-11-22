@@ -9,13 +9,14 @@ public class Touch : MonoBehaviour
     public GameObject target;
     public static bool click;
 
-    public static int B3cnt;
+    public static int B3cnt=10;
     private int cnt;
 
     // Start is called before the first frame update
     void Start()
     {
         clickGameObject.SetActive(true);
+        B3cnt = 10;
         click = false;
     }
 

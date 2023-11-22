@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class Battle3Clear : MonoBehaviour
 {
     // Start is called before the first frame update
-    public static bool BattleClearFlg3;//バトル3がクリアされたかどうかのフラグ
+
     public string sceneName;//読み込むシーン名
 
     public int plasnum;//10に足す個数設定
@@ -18,8 +18,8 @@ public class Battle3Clear : MonoBehaviour
     void Start()
     {
         Goaltext = GetComponent<Text>();
-        BattleClearFlg3 = false;
-        Touch.B3cnt += plasnum;
+        GameManager.Battele3Flg = false;
+        
     }
 
     // Update is called once per frame
@@ -39,6 +39,6 @@ public class Battle3Clear : MonoBehaviour
     void Clear()
     {
         SceneManager.LoadScene(sceneName);
-        BattleClearFlg3 = true;
+        GameManager.Battele3Flg = true;
     }
 }

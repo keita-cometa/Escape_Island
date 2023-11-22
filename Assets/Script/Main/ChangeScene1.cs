@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 public class ChangeScene1 : MonoBehaviour
 {
     public string sceneName;//読み込むシーン名
-    public int num;
-    public static int posnum;
+    public int mnum;
+    public int bnum;
+    public static int posnum;//呼び出す場所決定用
+    public static int batnum;//リトライ用
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +26,7 @@ public class ChangeScene1 : MonoBehaviour
     public void Load()
     {
         SceneManager.LoadScene(sceneName);
-        posnum = num;
+        posnum = mnum;
+        batnum = bnum;
     }
 }

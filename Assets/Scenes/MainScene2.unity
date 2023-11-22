@@ -751,7 +751,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 766286704}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -975,9 +975,9 @@ RectTransform:
   - {fileID: 900270403}
   - {fileID: 1466458129}
   - {fileID: 1180684261}
+  - {fileID: 797406116}
   - {fileID: 1117888364}
   - {fileID: 689458909}
-  - {fileID: 797406116}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1000,7 +1000,7 @@ GameObject:
   - component: {fileID: 797406113}
   - component: {fileID: 797406112}
   m_Layer: 5
-  m_Name: ChangeMapButton (1)
+  m_Name: ChangeMapButton main1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1019,7 +1019,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: MainScene1
-  num: 1
+  mnum: 1
+  bnum: 0
 --- !u!114 &797406113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1128,7 +1129,7 @@ RectTransform:
   m_Children:
   - {fileID: 840986982}
   m_Father: {fileID: 766286704}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -2367,7 +2368,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 766286704}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1180684260
 GameObject:
@@ -2383,7 +2384,7 @@ GameObject:
   - component: {fileID: 1180684263}
   - component: {fileID: 1180684266}
   m_Layer: 5
-  m_Name: ChangeMapButton
+  m_Name: ChangeMapButton main3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2517,7 +2518,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: MainScene3
-  num: 4
+  mnum: 4
+  bnum: 0
 --- !u!1 &1293225298
 GameObject:
   m_ObjectHideFlags: 0
