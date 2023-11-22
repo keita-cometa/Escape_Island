@@ -4,7 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-
+  - signB
+  - signA
+  - weak
+  - weak1
+  - weak2
+  - weak3
   layers:
   - Default
   - TransparentFX
@@ -41,22 +46,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: New Layer 1
-    uniqueID: 3577150415
-    locked: 0
-  - name: New Layer 2
-    uniqueID: 3879286613
-    locked: 0
-  - name: New Layer 3
-    uniqueID: 4024909787
-    locked: 0
-  - name: New Layer 4
-    uniqueID: 2179466903
-    locked: 0
-  - name: New Layer 5
-    uniqueID: 847308683
-    locked: 0
-  - name: New Layer 6
-    uniqueID: 246868383
     locked: 0

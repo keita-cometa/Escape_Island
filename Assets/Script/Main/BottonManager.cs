@@ -30,11 +30,15 @@ public class BottonManager : MonoBehaviour
     {      
         if(!PlayerController.isMoving)
         {
-            if (GoalManager.BattleClearFlg1)
+            if (GoalManager.BattleClearFlg1)//バトルフラグ１がtrueになったら
             {
                 panel2.SetActive(true);
             }
-            panel1.SetActive(true);
+            if(!GoalManager.BattleClearFlg1)
+            {
+                panel1.SetActive(true);
+            }
+            
         }
      }
 
