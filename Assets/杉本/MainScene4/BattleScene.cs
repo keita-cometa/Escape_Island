@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class BattleScene : MonoBehaviour
 {
     public string sceneName;//ì«Ç›çûÇﬁÉVÅ[Éìñº
+    public static bool movestop=false;
 
     // Start is called before the first frame update
     void Start()
@@ -16,14 +17,14 @@ public class BattleScene : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         Invoke("battle", 4.0f);
-        PlayerController.isMoving = true;
-        enemymove.isMoving = true;
+        movestop = true;
     }
 
     void battle()
     {
         SceneManager.LoadScene(sceneName);
         ChangeScene1.batnum = 5;
+        movestop = false;
     }
 
     // Update is called once per frame

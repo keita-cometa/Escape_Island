@@ -56,13 +56,9 @@ public class PlayerController : MonoBehaviour
         }
         else if (ChangeScene1.posnum == 9)
         {
-            transform.position = GameManager.M4_3pos;
-        }
-        else if (ChangeScene1.posnum == 10)
-        {
             transform.position = GameManager.M5_1pos;
         }
-        else if (ChangeScene1.posnum == 11)
+        else if (ChangeScene1.posnum == 10)
         {
             transform.position = GameManager.M5_2pos;
         }
@@ -79,7 +75,7 @@ public class PlayerController : MonoBehaviour
     {
         //ˆÚ“®§Œä
         // ˆÚ“®’†‚¾‚Æ“ü—Í‚ğó‚¯•t‚¯‚È‚¢
-        if (!isMoving)
+        if (!isMoving&&BattleScene.movestop==false)
         {
             //”»’è‚Ì‰Šú‰»
             other_obj = false;

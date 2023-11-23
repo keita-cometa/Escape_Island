@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3457344562389566047}
   - component: {fileID: 5605057773009257916}
-  - component: {fileID: -1859075638819451233}
+  - component: {fileID: 766368830244123407}
   m_Layer: 0
   m_Name: SerachArea
   m_TagString: Untagged
@@ -59,7 +59,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
---- !u!114 &-1859075638819451233
+--- !u!114 &766368830244123407
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -68,8 +68,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 4843803403476584829}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1e896a61454a094daecd1aa645c2db5, type: 3}
+  m_Script: {fileID: 11500000, guid: 12ebe330c11dd864fb9dc97fdf95556a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 0}
-  Button: {fileID: 0}
+  BowButton: {fileID: 0}
+  HandleButton: {fileID: 0}

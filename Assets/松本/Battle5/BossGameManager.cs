@@ -19,6 +19,7 @@ public class BossGameManager : MonoBehaviour
         if(WolfManager.wolfnum==3)
         {
             SceneManager.LoadScene(sceneName);
+            GameManager.Battele5Flg = true;
         }
     }
 }

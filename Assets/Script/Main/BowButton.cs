@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class craftButton : MonoBehaviour
+public class BowButton : MonoBehaviour
 {
     public GameObject itemtext;
     public GameObject Button;

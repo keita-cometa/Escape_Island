@@ -17,6 +17,6 @@ public class RetryButtan : MonoBehaviour
         if (ChangeScene1.batnum == 5)
             SceneManager.LoadScene("SnakeBattle");
         if (ChangeScene1.batnum == 6)
-            SceneManager.LoadScene("BattleScene5");
+            SceneManager.LoadScene("BossBattleScene5");
     }
 }

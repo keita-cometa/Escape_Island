@@ -6,6 +6,7 @@ public class sirusi : MonoBehaviour
 {
     public GameObject clickedGameObject;
     public static bool sign=false;
+    public static int clearnum=10;
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +17,7 @@ public class sirusi : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && StartC.onclick)
         {
 
             //clickedGameObject = null;
@@ -26,11 +27,13 @@ public class sirusi : MonoBehaviour
 
             if (hitSprite == true)
             {
+                Debug.Log("sprig");
                 clickedGameObject = hitSprite.transform.gameObject;
                 if (clickedGameObject.tag == "sirusi")
                 {
                     clickedGameObject.SetActive(false);
                     sign = true;
+                    clearnum--;
                     Debug.Log("hit");
                 }
             }

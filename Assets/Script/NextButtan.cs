@@ -7,15 +7,15 @@ public class NextButtan : MonoBehaviour
 { 
     public void SwitchScene()
     {
-        if (ChangeScene1.batnum == 1)
+        if (ChangeScene1.batnum == 1)//ñÿ
             SceneManager.LoadScene("MainScene1");
-        if (ChangeScene1.batnum == 3)
+        if (ChangeScene1.batnum == 3)//é≠
             SceneManager.LoadScene("MainScene3");
-        if (ChangeScene1.batnum == 4)
+        if (ChangeScene1.batnum == 4)//ÉCÉmÉVÉV
             SceneManager.LoadScene("MainScene4");
-        if (ChangeScene1.batnum == 5)
+        if (ChangeScene1.batnum == 5)//é÷
             SceneManager.LoadScene("MainScene4");
-        if (ChangeScene1.batnum == 6)
+        if (ChangeScene1.batnum == 6)//òT
             SceneManager.LoadScene("MainScene5");
     }
 }

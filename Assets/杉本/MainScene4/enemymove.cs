@@ -36,7 +36,7 @@ public class enemymove : MonoBehaviour
     {
         //ˆÚ“®§Œä
         // ˆÚ“®’†‚¾‚Æ“ü—Í‚ğó‚¯•t‚¯‚È‚¢
-        if (!isMoving)
+        if (!isMoving&&BattleScene.movestop==false)
         {
             //”»’è‚Ì‰Šú‰»
             other_obj = false;

@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/ManagerScene.unity
     guid: bae2371b5e7287c4ebb2e52d9102c273
   - enabled: 1
+    path: Assets/Scenes/TitleScene.unity
+    guid: dc77e045b95d4b24fb6d9fa93369d605
+  - enabled: 1
+    path: Assets/Scenes/MapScene.unity
+    guid: 5b4d3a3a4df324e4b9325c44abb68f4c
+  - enabled: 1
     path: Assets/Scenes/MainScene1.unity
     guid: e9adc0319c203864abf3c01bcec01ae5
   - enabled: 1
@@ -21,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainScene4.unity
     guid: b7d39b8684f313d44a5f9100e8d475c4
   - enabled: 1
+    path: Assets/Scenes/MainScene5.unity
+    guid: 7daf7b8c53205234e972208f84fdb6fd
+  - enabled: 1
     path: Assets/Scenes/BattleScene1.unity
     guid: b0f5d603a7d531e4ca7c0901653d8d8e
   - enabled: 1
@@ -32,6 +41,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SnakeBattle.unity
     guid: 83b858ccad4d19e4f898c67a59a7c23b
+  - enabled: 1
+    path: Assets/Scenes/BossBattleScene5.unity
+    guid: f52b1684054961f469e8fb6324c2cd01
   - enabled: 1
     path: Assets/Scenes/ClearScene.unity
     guid: f369212ec62d64249a4b45cef2cb0053

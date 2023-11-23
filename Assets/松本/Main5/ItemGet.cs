@@ -23,6 +23,7 @@ public class ItemGet : MonoBehaviour
     {
         GetText.SetActive(true);
         Invoke("Hidden", 4.0f);
+        GameManager.GasFlg = true;
     }
 
     void Hidden()
