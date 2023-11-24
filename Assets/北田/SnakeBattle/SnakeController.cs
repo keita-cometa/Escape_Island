@@ -22,9 +22,10 @@ public class SnakeController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (sirusi.sign == true)
+        if (Ssirusi.sign == true)
         {
-            Invoke("hyouzi", 2.0f);
+            Invoke("hyouzi", 3.0f);
+            Ssirusi.sign = false;
         }
 
         pos = transform.position;
@@ -35,6 +36,20 @@ public class SnakeController : MonoBehaviour
         if (pos.x > -2)
         {
             num = -1;
+        }
+
+        if(pos.x<-12)
+        {
+            radpos = Random.Range(1, 5);
+            //赤ならテレポート
+            if (radpos == 1)
+                    snake1.localPosition = new Vector2(11, 2);
+            if (radpos == 2)
+                    snake1.localPosition = new Vector2(11, 0);
+            if (radpos == 3)
+                    snake1.localPosition = new Vector2(11, -2);
+            if (radpos == 4)
+                    snake1.localPosition = new Vector2(11, -3);
         }
 
         //if (Input.GetMouseButtonDown(0))
@@ -76,5 +91,6 @@ public class SnakeController : MonoBehaviour
     void hyouzi()
     {
         clickedGameObject.SetActive(true);
+        
     }
 }

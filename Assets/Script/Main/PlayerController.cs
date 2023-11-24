@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public static Vector2 HeroPosition;//主人公の位置保存用変数    = new Vector2(0.5f, -4.5f)
     public static bool isMoving;// 移動中判定
+    public static bool stop;//接触したとき止まらせる
 
     bool other_obj;//ほかのオブジェクトがないかの判定
     public LayerMask WallLayer;//WallLayerを設定
@@ -75,7 +76,7 @@ public class PlayerController : MonoBehaviour
     {
         //移動制御
         // 移動中だと入力を受け付けない
-        if (!isMoving&&BattleScene.movestop==false)
+        if (!isMoving && stop == false)
         {
             //判定の初期化
             other_obj = false;

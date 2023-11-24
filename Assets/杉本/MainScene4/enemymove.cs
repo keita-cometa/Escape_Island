@@ -36,7 +36,7 @@ public class enemymove : MonoBehaviour
     {
         //ˆÚ“®§Œä
         // ˆÚ“®’†‚¾‚Æ“ü—Í‚ğó‚¯•t‚¯‚È‚¢
-        if (!isMoving&&BattleScene.movestop==false)
+        if (!isMoving&&PlayerController.stop==false)
         {
             //”»’è‚Ì‰Šú‰»
             other_obj = false;
@@ -143,13 +143,14 @@ public class enemymove : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        PlayerController.isMoving = true;
+        PlayerController.stop = true;
         Invoke("encount", 2.0f);
     }
     void encount()
     {
         SceneManager.LoadScene("InosisiBattle");
         ChangeScene1.batnum = 4;
-        PlayerController.isMoving = false;
+        PlayerController.stop = false;
+
     }
 }

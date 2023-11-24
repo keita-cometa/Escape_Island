@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public static bool Battele5Flg   = false;//狼
     public static bool BowFlg        = false;//弓矢作ったかどうか判別
     public static bool HandleFlg     = false;//ハンドル作ったかどうか判別
+    public static bool puroperaFlg   = false;//プロペラ取ったかどうか判別
     public static bool GasFlg        = false;//ガソリン取ったかどうか判別
 
     //各シーンロード時の出現場所設定

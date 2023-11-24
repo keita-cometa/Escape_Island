@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class sirusi : MonoBehaviour
+public class Isirusi : MonoBehaviour
 {
     public GameObject clickedGameObject;
     public static bool sign=false;
-    public static int clearnum=10;
+    public static int Iclearnum=10;
 
     // Start is called before the first frame update
     void Start()
@@ -29,11 +29,12 @@ public class sirusi : MonoBehaviour
             {
                 Debug.Log("sprig");
                 clickedGameObject = hitSprite.transform.gameObject;
+                Debug.Log(clickedGameObject.tag);
                 if (clickedGameObject.tag == "sirusi")
                 {
                     clickedGameObject.SetActive(false);
                     sign = true;
-                    clearnum--;
+                    Iclearnum--;
                     Debug.Log("hit");
                 }
             }

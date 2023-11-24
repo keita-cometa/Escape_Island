@@ -27,9 +27,10 @@ public class InosisiController : MonoBehaviour
             Invoke("Speed", 2.0f);
             voke = false;
         }
-        if(sirusi.sign==true)
+        if(Isirusi.sign==true)
         {
             Invoke("hyouzi", 2.0f);
+            Isirusi.sign = false;
         }
 
         pos = transform.position;
@@ -66,14 +67,19 @@ public class InosisiController : MonoBehaviour
     void hyouzi()
     {
         clickedGameObject.SetActive(true);
+       
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-       clickedGameObject.SetActive(false);
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        clickedGameObject.SetActive(true);
-    }
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //   clickedGameObject.SetActive(false);
+    //}
+    //private void OnTriggerExit2D(Collider2D collision)
+    //{
+    //    //if(sirusi.sign==true)
+    //    {
+    //        clickedGameObject.SetActive(true);
+    //    }
+        
+    //}
 }

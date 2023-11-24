@@ -10,6 +10,7 @@ TagManager:
   - weak1
   - weak2
   - weak3
+  - sirusi
   layers:
   - Default
   - TransparentFX

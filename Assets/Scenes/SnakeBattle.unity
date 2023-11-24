@@ -240,7 +240,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -260, y: -25}
+  m_AnchoredPosition: {x: -220, y: -25}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &177162690
@@ -294,7 +294,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 177162687}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baf8a151b42fc324aa5e59dd2227960f, type: 3}
+  m_Script: {fileID: 11500000, guid: 80b9493f42690234eace825b6fcfda27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: ClearScene
@@ -511,7 +511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -579,7 +579,6 @@ GameObject:
   - component: {fileID: 409771983}
   - component: {fileID: 409771985}
   - component: {fileID: 409771986}
-  - component: {fileID: 409771988}
   - component: {fileID: 409771987}
   m_Layer: 0
   m_Name: snake
@@ -706,27 +705,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 5.1349998
---- !u!50 &409771988
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 409771982}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 1
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &430559482
 GameObject:
   m_ObjectHideFlags: 0
@@ -751,7 +729,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430559482}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9725084, y: 0.0797746, z: 2.9572499}
+  m_LocalPosition: {x: 0, y: 0, z: 2.9572499}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -945,7 +923,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1379620834}
   - component: {fileID: 1379620836}
-  - component: {fileID: 1379620837}
+  - component: {fileID: 1379620839}
   - component: {fileID: 1379620838}
   m_Layer: 0
   m_Name: sirusi
@@ -1021,19 +999,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1379620837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1379620833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 601f7fef2ef2bf14dac97f7144b3fd48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clickedGameObject: {fileID: 1379620833}
 --- !u!61 &1379620838
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1060,6 +1025,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.88, y: 0.86}
   m_EdgeRadius: 0
+--- !u!114 &1379620839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379620833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe72dea5d3b38ce4fba7d554d73a160e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickedGameObject: {fileID: 1379620833}
 --- !u!1 &1412341967
 GameObject:
   m_ObjectHideFlags: 0
@@ -1219,7 +1197,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 30, y: -25}
+  m_AnchoredPosition: {x: 80, y: -25}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1432030577
@@ -1412,7 +1390,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1560281250}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15, y: 2, z: 0}
+  m_LocalPosition: {x: -12, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Inosisiclear : MonoBehaviour
+public class snakeclear : MonoBehaviour
 {
-    public string sceneName;//読み込むシーン名
+    public string sceneName;
     public Text Goaltext;//クリア個数テキスト
 
     // Start is called before the first frame update
@@ -19,17 +19,17 @@ public class Inosisiclear : MonoBehaviour
     void Update()
     {
         //目標個数表示
-        Goaltext.text = Isirusi.Iclearnum.ToString("0");
+        Goaltext.text = Ssirusi.Sclearnum.ToString("0");
 
         //goalnumが0になったらクリア関数を呼び出す
-        if (Isirusi.Iclearnum == 0)
+        if (Ssirusi.Sclearnum == 0)
         {
             Clear();
         }
     }
-    void Clear()
+     void Clear()
     {
         SceneManager.LoadScene(sceneName);
-        GameManager.Battele4_1Flg = true;
+        GameManager.Battele4_2Flg = true;
     }
 }
