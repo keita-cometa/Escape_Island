@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public static Vector2 HeroPosition;//主人公の位置保存用変数    = new Vector2(0.5f, -4.5f)
+    public static Vector2 HeroPosition = new Vector2(0.5f, -4.5f);//主人公の位置保存用変数    
     public static bool isMoving;// 移動中判定
     public static bool stop;//接触したとき止まらせる
 
@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            //transform.position = HeroPosition;//保存した位置を開始時に呼び出す
+            transform.position = HeroPosition;//保存した位置を開始時に呼び出す
         }
         
         anim = GetComponent<Animator>();
@@ -85,6 +85,10 @@ public class PlayerController : MonoBehaviour
             input.x = Input.GetAxisRaw("Horizontal")*2.0f; // 横方向
             input.y = Input.GetAxisRaw("Vertical")*2.0f;  // 縦方向
 
+            if(input.x!=0&&input.y!=0)
+            {
+                input.y = 0;
+            }
             // 入力があった時
             if (input != Vector2.zero)
             {

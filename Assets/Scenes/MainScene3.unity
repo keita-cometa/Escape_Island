@@ -2124,6 +2124,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -1859075638819451233, guid: 6e2ca308149533b43be1a19717ae21ad, type: 3}
+    - {fileID: 766368830244123407, guid: 6e2ca308149533b43be1a19717ae21ad, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6e2ca308149533b43be1a19717ae21ad, type: 3}
 --- !u!1 &1452266236
 GameObject:
@@ -3012,6 +3013,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -1859075638819451233, guid: 6e2ca308149533b43be1a19717ae21ad, type: 3}
+    - {fileID: 766368830244123407, guid: 6e2ca308149533b43be1a19717ae21ad, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6e2ca308149533b43be1a19717ae21ad, type: 3}
 --- !u!1 &1870479950
 GameObject:
@@ -3104,6 +3106,7 @@ GameObject:
   - component: {fileID: 1952291604}
   - component: {fileID: 1952291606}
   - component: {fileID: 1952291607}
+  - component: {fileID: 1952291608}
   m_Layer: 0
   m_Name: deer
   m_TagString: Untagged
@@ -3222,6 +3225,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &1952291608
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952291603}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d5d6180a99c42674b8207194977f9012, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &1971989420
 GameObject:
   m_ObjectHideFlags: 0
@@ -3345,11 +3368,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 39d2113f434ae3b4ea823e2eb95d965d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -3825,6 +3848,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -1859075638819451233, guid: 6e2ca308149533b43be1a19717ae21ad, type: 3}
+    - {fileID: 766368830244123407, guid: 6e2ca308149533b43be1a19717ae21ad, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6e2ca308149533b43be1a19717ae21ad, type: 3}
 --- !u!4 &3526032720055932872 stripped
 Transform:

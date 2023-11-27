@@ -14,6 +14,7 @@ public class BowButton : MonoBehaviour
     {
         if(GameManager.BowFlg)
         {
+            Button.SetActive(false);
             Yazirusi.SetActive(true);
         }
         itemtext.SetActive(false);

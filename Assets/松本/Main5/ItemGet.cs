@@ -5,12 +5,15 @@ using UnityEngine.UI;
 
 public class ItemGet : MonoBehaviour
 {
+    private AudioSource audioSource;
     public GameObject GetText;
+    [SerializeField] private AudioClip se;
 
     // Start is called before the first frame update
     void Start()
     {
         GetText.SetActive(false);
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -24,6 +27,7 @@ public class ItemGet : MonoBehaviour
         GetText.SetActive(true);
         Invoke("Hidden", 4.0f);
         GameManager.GasFlg = true;
+        //audioSource.PlayOneShot(se);
     }
 
     void Hidden()

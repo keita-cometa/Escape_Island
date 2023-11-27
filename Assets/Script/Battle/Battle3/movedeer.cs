@@ -20,12 +20,12 @@ public class movedeer : MonoBehaviour
         //クリックされたらスピードアップ
         if(Touch.click==true)
         {
-            speed = 0.02f;
+            speed = 0.2f;
         }
         //通常のスピード
         else
         {
-            speed = 0.01f;
+            speed = 0.1f;
         }
 
         //movepointを追いかける
