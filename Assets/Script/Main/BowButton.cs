@@ -17,6 +17,7 @@ public class BowButton : MonoBehaviour
             Button.SetActive(false);
             Yazirusi.SetActive(true);
         }
+        Yazirusi.SetActive(false);
         itemtext.SetActive(false);
     }
 

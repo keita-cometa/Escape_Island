@@ -11,11 +11,14 @@ public class HPManager : MonoBehaviour
     public WolfManager wolfManager;
 
     public string sceneName;
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip se;
 
     // Start is called before the first frame update
     void Start()
     {
         HPtext = GetComponent<Text>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -23,7 +26,7 @@ public class HPManager : MonoBehaviour
     {
         //åªç›ÇÃÇÃÇ±ÇËHPï\é¶
         HPtext.text = wolfManager.PHP.ToString("0");
-        if(wolfManager.PHP==0)
+        if(wolfManager.PHP<0)
         {
             SceneManager.LoadScene(sceneName);
         }
@@ -32,5 +35,6 @@ public class HPManager : MonoBehaviour
     public void Attack()
     {
         wolfManager.PHP--;
+        audioSource.PlayOneShot(se);
     }
 }

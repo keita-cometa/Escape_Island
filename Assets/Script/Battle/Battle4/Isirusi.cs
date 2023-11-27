@@ -8,10 +8,13 @@ public class Isirusi : MonoBehaviour
     public static bool sign=false;
     public static int Iclearnum=10;
 
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip se;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -37,6 +40,10 @@ public class Isirusi : MonoBehaviour
                     Iclearnum--;
                     Debug.Log("hit");
                 }
+            }
+            else
+            {
+                audioSource.PlayOneShot(se);
             }
         }
     }

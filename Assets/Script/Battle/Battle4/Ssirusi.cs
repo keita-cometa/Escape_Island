@@ -8,10 +8,13 @@ public class Ssirusi : MonoBehaviour
     public static bool sign=false;
     public static int Sclearnum=10;
 
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip se;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -37,6 +40,14 @@ public class Ssirusi : MonoBehaviour
                     Sclearnum--;
                     Debug.Log("hit");
                 }
+                else
+                {
+                    audioSource.PlayOneShot(se);
+                }
+            }
+            else
+            {
+                audioSource.PlayOneShot(se);
             }
         }
     }

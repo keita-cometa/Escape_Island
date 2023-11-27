@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2036483198}
   - component: {fileID: 2036483200}
-  - component: {fileID: 2036483199}
   - component: {fileID: 7001124041721519429}
   m_Layer: 0
   m_Name: WeakPoint
@@ -86,21 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2036483199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2036483197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2456566ad7ec9245aafa54510670b45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weakPoint: {fileID: 2036483197}
-  activetime: 0
-  wolfManager: {fileID: 0}
 --- !u!61 &7001124041721519429
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -137,7 +121,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7196174281871252579}
   - component: {fileID: 7196174281871252576}
-  - component: {fileID: 7196174281871252577}
   - component: {fileID: 4037552940934861757}
   m_Layer: 0
   m_Name: Wolf1
@@ -214,32 +197,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7196174281871252577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7196174281871252590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 074369653d2be1748964912fca4719d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hpManager: {fileID: 0}
-  Wolf: {fileID: 7196174281871252590}
-  weakPoint: {fileID: 2036483197}
-  movespeed: 3
-  topPos: 4
-  bottomPos: -4
-  leftPos: -7
-  rightPos: -2
-  keikatime: 0
-  Attacktime: 10
-  PHP: 10
-  WolfHP: 0
-  activetime: 3
-  sceneName: GameoverScene
 --- !u!95 &4037552940934861757
 Animator:
   serializedVersion: 5

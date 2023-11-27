@@ -151,6 +151,6 @@ public class enemymove : MonoBehaviour
         SceneManager.LoadScene("InosisiBattle");
         ChangeScene1.batnum = 4;
         PlayerController.stop = false;
-
+        ChangeScene1.posnum = 0;
     }
 }

@@ -17,8 +17,12 @@ public class movedeer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {            
+        
+    }
+    private void FixedUpdate()
+    {
         //クリックされたらスピードアップ
-        if(Touch.click==true)
+        if (Touch.click == true)
         {
             speed = 0.2f;
         }

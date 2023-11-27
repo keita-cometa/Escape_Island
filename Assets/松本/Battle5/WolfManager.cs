@@ -23,11 +23,14 @@ public class WolfManager : MonoBehaviour
     public float Attacktime;//攻撃を行うまでの時間設定
     public int PHP=10;//プレイヤーのHP変数
 
-    public int WolfHP;//オオカミのHP変数
+    //public int WolfHP1;//オオカミ1のHP変数
+    //public int WolfHP2;//オオカミ2のHP変数
+    //public int WolfHP3;//オオカミ3のHP変数
     public float activetime;//しるしがアクティブになるまでの時間
     public string sceneName;//呼び出すシーン名
 
     public static int wolfnum;//倒したオオカミを数える用
+    public WolfHPmanager wolfManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +48,9 @@ public class WolfManager : MonoBehaviour
             //ウィークポイントの再表示
             if (!weakPoint.activeInHierarchy)
             {
+                //ウィークポイントが消えてる状態になったらwalkにする
+                anim.SetBool("Attack", false);
+                //アクティブタイム経過したら再表示
                 if (keikatime > activetime)
                 {
                     Debug.Log("hyouzi");
@@ -64,8 +70,8 @@ public class WolfManager : MonoBehaviour
                 if (keikatime > Attacktime)
                 {
                     hpManager.Attack();
+                    //wolfManager.damageSE();
 
-                    
                     //経過時間を0に戻す
                     keikatime = 0.0f;
                     anim.SetBool("Attack", false);
@@ -75,6 +81,14 @@ public class WolfManager : MonoBehaviour
             
         }
         
+        if(wolfnum==1)
+        {
+            movespeed = 7;
+        }
+        if(wolfnum==2)
+        {
+            movespeed = 8;
+        }
 
         if (movePosition == Wolf.transform.position)  //オブジェクトが目的地に到達すると、
         {
@@ -95,13 +109,13 @@ public class WolfManager : MonoBehaviour
             transform.localScale = new Vector3(1, 1, 1);
             //anim.SetBool("Attack", false);
         }
-        if (WolfHP == 0)
-        {
-            wolfnum++;
-            //HPが0になったらウルフを消す
-            Wolf.SetActive(false);
+        //if (WolfHP == 0)
+        //{
+        //    wolfnum++;
+        //    //HPが0になったらウルフを消す
+        //    Wolf.SetActive(false);
 
-        }
+        //}
 
         
     }
@@ -121,8 +135,8 @@ public class WolfManager : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
-    public void  Damage()
-    {
-        WolfHP--;
-    }
+    //public void  Damage1()
+    //{
+    //    WolfHP1--;
+    //}
 }

@@ -12,11 +12,12 @@ public class InosisiController : MonoBehaviour
 
     public GameObject clickedGameObject;
 
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip se;
     // Start is called before the first frame update
     void Start()
     {
-        
-
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -29,6 +30,7 @@ public class InosisiController : MonoBehaviour
         }
         if(Isirusi.sign==true)
         {
+            audioSource.PlayOneShot(se);
             Invoke("hyouzi", 2.0f);
             Isirusi.sign = false;
         }

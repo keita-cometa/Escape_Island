@@ -243,6 +243,7 @@ public class Movement : MonoBehaviour
     void encount()
     {
         SceneManager.LoadScene("BattleScene3");
+        ChangeScene1.posnum = 0;
         ChangeScene1.batnum = 3;
         PlayerController.isMoving = false;
     }

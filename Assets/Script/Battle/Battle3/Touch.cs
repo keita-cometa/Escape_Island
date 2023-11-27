@@ -9,6 +9,9 @@ public class Touch : MonoBehaviour
     public GameObject target;
     public static bool click;
 
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip se;
+
     public static int B3cnt=10;
     private int cnt;
 
@@ -18,6 +21,7 @@ public class Touch : MonoBehaviour
         clickGameObject.SetActive(true);
         B3cnt = 10;
         click = false;
+        audioSource = GetComponent<AudioSource>();
     }
 
     //ƒNƒŠƒbƒN‚³‚ê‚½‚ç
@@ -36,6 +40,7 @@ public class Touch : MonoBehaviour
             click = true;
             StartCoroutine(Indication());
             B3cnt--;
+            audioSource.PlayOneShot(se);
         }
     }
 

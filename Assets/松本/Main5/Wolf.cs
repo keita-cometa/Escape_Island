@@ -38,6 +38,7 @@ public class Wolf : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
         ChangeScene1.batnum = 6;
+        ChangeScene1.posnum = 0;
     }
 
 }

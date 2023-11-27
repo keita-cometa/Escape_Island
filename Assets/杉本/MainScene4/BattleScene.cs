@@ -24,6 +24,7 @@ public class BattleScene : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
         ChangeScene1.batnum = 5;
+        ChangeScene1.posnum = 0;
         PlayerController.stop = false;
     }
 

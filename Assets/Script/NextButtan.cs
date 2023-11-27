@@ -17,6 +17,8 @@ public class NextButtan : MonoBehaviour
             SceneManager.LoadScene("MainScene4");
         if (ChangeScene1.batnum == 6)//˜T
             SceneManager.LoadScene("MainScene5");
+        if (ChangeScene1.batnum == 7)//–Ø‹­‰»”Å
+            SceneManager.LoadScene("MainScene3");
     }
 }
    

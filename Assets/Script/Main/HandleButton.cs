@@ -28,7 +28,7 @@ public class HandleButton : MonoBehaviour
 
     public void UI()
     {
-        if(GameManager.Battele3Flg)
+        if(GameManager.Battele3Flg&&GameManager.woodFlg)
         {
             gettext.SetActive(true);
             GameManager.HandleFlg = true;

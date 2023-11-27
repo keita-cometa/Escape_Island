@@ -13,10 +13,14 @@ public class SnakeController : MonoBehaviour
     int radpos;
     public GameObject clickedGameObject;
 
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip se;
+
     // Start is called before the first frame update
     void Start()
     {
         snake1 = GetComponent<Transform>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -24,6 +28,7 @@ public class SnakeController : MonoBehaviour
     {
         if (Ssirusi.sign == true)
         {
+            audioSource.PlayOneShot(se);
             Invoke("hyouzi", 3.0f);
             Ssirusi.sign = false;
         }

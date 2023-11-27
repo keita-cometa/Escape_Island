@@ -7,6 +7,8 @@ public class SignA : MonoBehaviour
     public static bool ClickSignA;
     public GameObject TouchSignA;
 
+    public SignASE signASE;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +35,7 @@ public class SignA : MonoBehaviour
                     {
                         ClickSignA = true;
                         TouchSignA.SetActive(false);
-
+                        signASE.SE();
                     }
                 }
             }

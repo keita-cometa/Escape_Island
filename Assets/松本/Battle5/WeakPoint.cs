@@ -9,14 +9,14 @@ public class WeakPoint : MonoBehaviour
 
     public static bool pointFlg = true;//ポイントがアクティブかどうか判定用
 
+    private AudioSource audioSource;
+    //public float activetime;//アクティブになるまでの時間
 
-    public float activetime;//アクティブになるまでの時間
-
-    public WolfManager wolfManager;
+    public WolfHPmanager wolfManager;
     // Start is called before the first frame update
     void Start()
     {
-        
+        //audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -33,14 +33,39 @@ public class WeakPoint : MonoBehaviour
                 //飛ばした先にゲームタグ（weak）がないか調べる
                 weakPoint = hitSprite.transform.gameObject;
                 Debug.Log("Ray");
-                if (weakPoint.tag == "weak")
+                if (weakPoint.tag == "weak1")
                 {
                     Debug.Log("hit");
-                    wolfManager.Damage();
+                    wolfManager.Damage1();
                     //ヒットしたときウィークポイントを一時的に隠す
-                    weakPoint.SetActive(false); 
+                    weakPoint.SetActive(false);
+                    wolfManager.hitSE();
+                    //audioSource.PlayOneShot(se1);
+                }
+                else if (weakPoint.tag == "weak2")
+                {
+                    Debug.Log("hit");
+                    wolfManager.Damage2();
+                    //ヒットしたときウィークポイントを一時的に隠す
+                    weakPoint.SetActive(false);
+                    wolfManager.hitSE();
+                    //audioSource.PlayOneShot(se1);
+                }
+                else if (weakPoint.tag == "weak3")
+                {
+                    Debug.Log("hit");
+                    wolfManager.Damage3();
+                    //ヒットしたときウィークポイントを一時的に隠す
+                    weakPoint.SetActive(false);
+                    wolfManager.hitSE();
+                    //audioSource.PlayOneShot(se1);
                 }
                 
+            }
+            else
+            {
+                //audioSource.PlayOneShot(se2);
+                wolfManager.missSE();
             }
         }
         
