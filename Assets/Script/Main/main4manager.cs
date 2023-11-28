@@ -24,6 +24,13 @@ public class main4manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (GameManager.Battele4_1Flg && GameManager.Battele4_2Flg)
+        {
+            main5yazirusi.SetActive(true);
+        }
+        if (GameManager.Battele4_2Flg)
+        {
+            snake.SetActive(false);
+        }
     }
 }

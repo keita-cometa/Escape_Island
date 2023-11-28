@@ -25,6 +25,13 @@ public class main3manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (GameManager.Battele3Flg)
+        {
+            main4yazirusi.SetActive(true);
+        }
+        if (GameManager.Battele5Flg)
+        {
+            main5yazirusi.SetActive(true);
+        }
     }
 }

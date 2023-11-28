@@ -746,6 +746,7 @@ MonoBehaviour:
   se: {fileID: 8300000, guid: 174c4cae9381de24fbc56e0389d98ecf, type: 3}
   kirakira: {fileID: 80463860}
   main3yazirusi: {fileID: 1381114317}
+  main4yazirusi: {fileID: 1529617066}
   wolfs: {fileID: 324521513}
 --- !u!82 &236077187
 AudioSource:
@@ -3026,7 +3027,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_TargetDisplay: 0
 --- !u!224 &1566936920
 RectTransform:

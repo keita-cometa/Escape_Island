@@ -9,6 +9,7 @@ public class main5manager : MonoBehaviour
 
     public GameObject kirakira;
     public GameObject main3yazirusi;
+    public GameObject main4yazirusi;
     public GameObject wolfs;
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,7 @@ public class main5manager : MonoBehaviour
         kirakira.SetActive(true);
         wolfs.SetActive(true);
         main3yazirusi.SetActive(false);
+        main4yazirusi.SetActive(true);
         if(GameManager.Battele5Flg)
         {
             wolfs.SetActive(false);
@@ -36,6 +38,15 @@ public class main5manager : MonoBehaviour
             kirakira.SetActive(false);
             main3yazirusi.SetActive(true);
             //audioSource.PlayOneShot(se);
+        }
+        if (GameManager.Battele5Flg)
+        {
+            wolfs.SetActive(false);
+        }
+        if (GameManager.GasFlg)
+        {
+            kirakira.SetActive(false);
+            main3yazirusi.SetActive(true);
         }
     }
 }

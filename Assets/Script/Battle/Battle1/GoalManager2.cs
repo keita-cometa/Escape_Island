@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class GoalManager1 : MonoBehaviour
+public class GoalManager2 : MonoBehaviour
 {
     public string sceneName;//“Ç‚İ‚ŞƒV[ƒ“–¼
 

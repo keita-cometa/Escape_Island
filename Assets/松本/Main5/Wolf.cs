@@ -28,7 +28,7 @@ public class Wolf : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        PlayerController.stop = true;
             audioSource.PlayOneShot(se);
             Invoke("Load", 2.0f);
        
@@ -39,6 +39,7 @@ public class Wolf : MonoBehaviour
         SceneManager.LoadScene(sceneName);
         ChangeScene1.batnum = 6;
         ChangeScene1.posnum = 0;
+        PlayerController.stop = false;
     }
 
 }

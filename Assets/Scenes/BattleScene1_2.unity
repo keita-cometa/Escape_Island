@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 177162688}
   - component: {fileID: 177162691}
   - component: {fileID: 177162690}
-  - component: {fileID: 177162689}
+  - component: {fileID: 177162692}
   m_Layer: 5
   m_Name: "\u30AF\u30EA\u30A2\u500B\u6570"
   m_TagString: Untagged
@@ -243,21 +243,6 @@ RectTransform:
   m_AnchoredPosition: {x: -260, y: -25}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &177162689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 177162687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 100940fc198360b448be5f612d6be932, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: ClearScene
-  plasnum: 20
-  Goaltext: {fileID: 177162690}
 --- !u!114 &177162690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -300,6 +285,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 177162687}
   m_CullTransparentMesh: 1
+--- !u!114 &177162692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177162687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 110870181005c7b4abadb9781c69d168, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: ClearScene
+  plasnum: 20
+  Goaltext: {fileID: 177162690}
 --- !u!1 &354864974
 GameObject:
   m_ObjectHideFlags: 0

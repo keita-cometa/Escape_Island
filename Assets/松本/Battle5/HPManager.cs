@@ -26,7 +26,7 @@ public class HPManager : MonoBehaviour
     {
         //åªç›ÇÃÇÃÇ±ÇËHPï\é¶
         HPtext.text = wolfManager.PHP.ToString("0");
-        if(wolfManager.PHP<0)
+        if(wolfManager.PHP<=0)
         {
             SceneManager.LoadScene(sceneName);
         }
