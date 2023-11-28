@@ -1166,7 +1166,7 @@ MonoBehaviour:
   PHP: 10
   activetime: 3
   sceneName: GameoverScene
-  wolfManager: {fileID: 0}
+  wolfManager: {fileID: 1611733598}
 --- !u!1 &1010482161
 GameObject:
   m_ObjectHideFlags: 0
@@ -1827,7 +1827,7 @@ MonoBehaviour:
   PHP: 10
   activetime: 3
   sceneName: GameoverScene
-  wolfManager: {fileID: 0}
+  wolfManager: {fileID: 1611733598}
 --- !u!1 &1880623049
 GameObject:
   m_ObjectHideFlags: 0
@@ -2126,7 +2126,7 @@ MonoBehaviour:
   PHP: 10
   activetime: 3
   sceneName: GameoverScene
-  wolfManager: {fileID: 0}
+  wolfManager: {fileID: 1611733598}
 --- !u!1001 &7196174281849967225
 PrefabInstance:
   m_ObjectHideFlags: 0

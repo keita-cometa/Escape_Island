@@ -27,21 +27,25 @@ public class Touch : MonoBehaviour
     //ƒNƒŠƒbƒN‚³‚ê‚½‚ç
     public void Onclick()
     {
-        //”½‰ž‚µ‚Ä‚Ù‚µ‚­‚È‚¢‚Æ‚«
-        if (click == true||StartC.starttf==false|| direction.obstacles == true)
+        if(StartC.onclick)
         {
-            Debug.Log("NO");
-            return;
+            //”½‰ž‚µ‚Ä‚Ù‚µ‚­‚È‚¢‚Æ‚«
+            if (click == true||StartC.starttf==false|| direction.obstacles == true)
+            {
+                Debug.Log("NO");
+                return;
+             }
+            //”½‰ž‚µ‚½‚ç
+            else
+            {
+                Debug.Log("cilck");
+                click = true;
+                StartCoroutine(Indication());
+                B3cnt--;
+                audioSource.PlayOneShot(se);
+            }
         }
-        //”½‰ž‚µ‚½‚ç
-        else
-        {
-            Debug.Log("cilck");
-            click = true;
-            StartCoroutine(Indication());
-            B3cnt--;
-            audioSource.PlayOneShot(se);
-        }
+        
     }
 
     public IEnumerator Indication()
