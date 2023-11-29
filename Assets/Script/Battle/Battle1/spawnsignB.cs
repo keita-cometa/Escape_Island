@@ -24,7 +24,7 @@ public class spawnsignB : MonoBehaviour
 
     IEnumerator Spawn()
     {
-        time = 8.0f;
+        time = 4.0f;
         while (SignA.ClickSignA)
         {
             IsSpawn = true;

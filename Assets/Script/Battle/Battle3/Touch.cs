@@ -15,6 +15,8 @@ public class Touch : MonoBehaviour
     public static int B3cnt=10;
     private int cnt;
 
+    //エフェクト用
+    [SerializeField] GameObject hitPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +40,7 @@ public class Touch : MonoBehaviour
             //反応したら
             else
             {
+                Instantiate(hitPrefab, transform.position, Quaternion.identity);
                 Debug.Log("cilck");
                 click = true;
                 StartCoroutine(Indication());

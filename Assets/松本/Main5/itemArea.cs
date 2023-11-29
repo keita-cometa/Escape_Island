@@ -20,7 +20,10 @@ public class itemArea : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        SearchButton.SetActive(true);
+        if(!PlayerController.isMoving)
+            SearchButton.SetActive(true);
+        if(PlayerController.isMoving)
+            SearchButton.SetActive(false);
     }
 
     private void OnTriggerExit2D(Collider2D collision)

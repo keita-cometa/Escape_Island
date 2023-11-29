@@ -6,7 +6,7 @@ public class SnakeController : MonoBehaviour
 {
     private Vector2 pos;
     public int num = 1;
-
+    public int speed=3;
     private Transform snake1;
     //private bool moving = true;
 
@@ -36,7 +36,7 @@ public class SnakeController : MonoBehaviour
         pos = transform.position;
 
         // （ポイント）マイナスをかけることで逆方向に移動する。
-        transform.Translate(transform.right * Time.deltaTime * 3 * num);
+        transform.Translate(transform.right * Time.deltaTime * speed * num);
 
         if (pos.x > -2)
         {
@@ -55,6 +55,10 @@ public class SnakeController : MonoBehaviour
                     snake1.localPosition = new Vector2(11, -2);
             if (radpos == 4)
                     snake1.localPosition = new Vector2(11, -3);
+        }
+        if(Ssirusi.sign)
+        {
+            speed = 10;
         }
 
         //if (Input.GetMouseButtonDown(0))
@@ -77,22 +81,22 @@ public class SnakeController : MonoBehaviour
     }
 
     //接触判定
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        radpos = Random.Range(1, 5);
-        //赤ならテレポート
-        if (collision.gameObject.tag == "left")
-        {
-            if (radpos == 1)
-                snake1.localPosition = new Vector2(11, 2);
-            if (radpos == 2)
-                snake1.localPosition = new Vector2(11, 0);
-            if (radpos == 3)
-                snake1.localPosition = new Vector2(11, -2);
-            if (radpos == 4)
-                snake1.localPosition = new Vector2(11, -3);
-        }
-    }
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    radpos = Random.Range(1, 5);
+    //    //赤ならテレポート
+    //    if (collision.gameObject.tag == "left")
+    //    {
+    //        if (radpos == 1)
+    //            snake1.localPosition = new Vector2(11, 2);
+    //        if (radpos == 2)
+    //            snake1.localPosition = new Vector2(11, 0);
+    //        if (radpos == 3)
+    //            snake1.localPosition = new Vector2(11, -2);
+    //        if (radpos == 4)
+    //            snake1.localPosition = new Vector2(11, -3);
+    //    }
+    //}
     void hyouzi()
     {
         clickedGameObject.SetActive(true);

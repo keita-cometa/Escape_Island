@@ -1040,6 +1040,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weakPoint: {fileID: 781231028}
   wolfManager: {fileID: 1611733598}
+  hitPrefab: {fileID: 4021103657954561961, guid: 5c755f9bc5253ea418e919994537dcc7, type: 3}
 --- !u!82 &781231034
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1281,6 +1282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weakPoint: {fileID: 1037348676}
   wolfManager: {fileID: 1611733598}
+  hitPrefab: {fileID: 4021103657954561961, guid: 5c755f9bc5253ea418e919994537dcc7, type: 3}
 --- !u!82 &1037348682
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1396,6 +1398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weakPoint: {fileID: 1075361799}
   wolfManager: {fileID: 1611733598}
+  hitPrefab: {fileID: 4021103657954561961, guid: 5c755f9bc5253ea418e919994537dcc7, type: 3}
 --- !u!82 &1075361805
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1675,9 +1678,13 @@ MonoBehaviour:
   Wolf1: {fileID: 1740009575}
   Wolf2: {fileID: 112033596}
   Wolf3: {fileID: 2115405162}
+  wolf1: 0
+  wolf2: 0
+  wolf3: 0
   se1: {fileID: 8300000, guid: 19b5c879c2a1cf846a5e55d6b0492482, type: 3}
   se2: {fileID: 8300000, guid: 148309e73ed057744b509a7d3b94c4e0, type: 3}
   se3: {fileID: 8300000, guid: f55e5e74737124640b80e60d66e2bf01, type: 3}
+  hitPrefab: {fileID: 4021103657954561961, guid: 5c755f9bc5253ea418e919994537dcc7, type: 3}
 --- !u!4 &1611733599
 Transform:
   m_ObjectHideFlags: 0

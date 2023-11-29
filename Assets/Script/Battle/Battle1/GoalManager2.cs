@@ -10,12 +10,13 @@ public class GoalManager2 : MonoBehaviour
 
     public int plasnum;//10に足す個数設定
     public Text Goaltext;//クリア個数テキスト
+    public GameObject ClearUI;
 
     // Start is called before the first frame update
     void Start()
     {
         Goaltext = GetComponent<Text>();
-        TouchsignB.goalnum += plasnum;
+        TouchsignB.goalnum = plasnum;
     }
 
     // Update is called once per frame
@@ -27,7 +28,9 @@ public class GoalManager2 : MonoBehaviour
         //goalnumが0になったらクリア関数を呼び出す
         if(TouchsignB.goalnum == 0)
         {
-            Clear();
+            StartC.onclick = false;
+            ClearUI.SetActive(true);
+            Invoke("Clear",3.0f);
         }
     }
 

@@ -11,6 +11,9 @@ public class ChangeScene1 : MonoBehaviour
     public static int posnum;//呼び出す場所決定用
     public static int batnum;//リトライ用
 
+    Color fadeColor = Color.black;
+    float fadespeed=1.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +28,7 @@ public class ChangeScene1 : MonoBehaviour
 
     public void Load()
     {
-        SceneManager.LoadScene(sceneName);
+        Initiate.Fade(sceneName, fadeColor, fadespeed);
         posnum = mnum;
         batnum = bnum;
     }

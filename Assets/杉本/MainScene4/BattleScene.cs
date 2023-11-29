@@ -8,20 +8,25 @@ public class BattleScene : MonoBehaviour
     public string sceneName;//ì«Ç›çûÇﬁÉVÅ[Éìñº
     //public static bool movestop=false;
 
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip se;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Invoke("battle", 4.0f);
+        audioSource.PlayOneShot(se);
+        Invoke("battle", 2.0f);
         PlayerController.stop = true;
     }
 
     void battle()
     {
+
         SceneManager.LoadScene(sceneName);
         ChangeScene1.batnum = 5;
         ChangeScene1.posnum = 0;

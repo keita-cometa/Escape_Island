@@ -403,6 +403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: MainScene1
+  se: {fileID: 8300000, guid: 1eff0c57563d82b4ba84794da112b686, type: 3}
 --- !u!82 &1180070428
 AudioSource:
   m_ObjectHideFlags: 0
@@ -415,7 +416,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: db00594be96b1ad42a920dcd629cb7e0, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0

@@ -21,10 +21,14 @@ public class enemymove : MonoBehaviour
     public GameObject boar;
     //private Animator anim = null;
 
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip se;
+
     // Start is called before the first frame update
     void Start()
     {
-        if(GameManager.Battele4_1Flg)
+        audioSource = GetComponent<AudioSource>();
+        if (GameManager.Battele4_1Flg)
         {
             boar.SetActive(false);
         }
@@ -141,8 +145,9 @@ public class enemymove : MonoBehaviour
         transform.position = targetPos;
         isMoving = false;
     }
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
+        audioSource.PlayOneShot(se);
         PlayerController.stop = true;
         Invoke("encount", 2.0f);
     }
