@@ -16,6 +16,7 @@ public class SnakeController : MonoBehaviour
     private AudioSource audioSource;
     [SerializeField] private AudioClip se;
 
+    [SerializeField] GameObject hitPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +29,7 @@ public class SnakeController : MonoBehaviour
     {
         if (Ssirusi.sign == true)
         {
+            Instantiate(hitPrefab, transform.position, Quaternion.identity);
             audioSource.PlayOneShot(se);
             Invoke("hyouzi", 3.0f);
             Ssirusi.sign = false;

@@ -588,6 +588,7 @@ MonoBehaviour:
   speed: 3
   clickedGameObject: {fileID: 253677432}
   se: {fileID: 0}
+  hitPrefab: {fileID: 0}
 --- !u!50 &358612233
 Rigidbody2D:
   serializedVersion: 4
@@ -1013,6 +1014,7 @@ MonoBehaviour:
   speed: 1
   clickedGameObject: {fileID: 1047115536}
   se: {fileID: 8300000, guid: 148309e73ed057744b509a7d3b94c4e0, type: 3}
+  hitPrefab: {fileID: 4021103657954561961, guid: 5c755f9bc5253ea418e919994537dcc7, type: 3}
 --- !u!61 &845827793
 BoxCollider2D:
   m_ObjectHideFlags: 0

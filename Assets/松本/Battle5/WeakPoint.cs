@@ -9,14 +9,18 @@ public class WeakPoint : MonoBehaviour
 
     public static bool pointFlg = true;//ポイントがアクティブかどうか判定用
 
-    public static bool hit1=true;
-    public static bool hit2=true;
-    public static bool hit3=true;
+    public static bool hit1=false;
+    public static bool hit2=false;
+    public static bool hit3=false;
 
     private AudioSource audioSource;
     //public float activetime;//アクティブになるまでの時間
 
     public WolfHPmanager wolfManager;
+
+    public Wolf1effect wolf1Effect;
+    public Wolf2effect wolf2Effect;
+    public Wolf3effect wolf3Effect;
 
     [SerializeField] GameObject hitPrefab;
     // Start is called before the first frame update
@@ -42,6 +46,7 @@ public class WeakPoint : MonoBehaviour
                 if (weakPoint.tag == "weak1")
                 {
                     hit1 = true;
+                    wolf1Effect.hiteffect();
                     Debug.Log("hit");
                     wolfManager.Damage1();
                     //ヒットしたときウィークポイントを一時的に隠す
@@ -51,7 +56,8 @@ public class WeakPoint : MonoBehaviour
                 }
                 else if (weakPoint.tag == "weak2")
                 {
-                    
+                    hit2 = true;
+                    wolf2Effect.hiteffect();
                     Debug.Log("hit");
                     wolfManager.Damage2();
                     //ヒットしたときウィークポイントを一時的に隠す
@@ -61,7 +67,8 @@ public class WeakPoint : MonoBehaviour
                 }
                 else if (weakPoint.tag == "weak3")
                 {
-                    
+                    hit3 = true;
+                    wolf3Effect.hiteffect();
                     Debug.Log("hit");
                     wolfManager.Damage3();
                     //ヒットしたときウィークポイントを一時的に隠す

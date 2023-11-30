@@ -123,7 +123,7 @@ public class WolfManager : MonoBehaviour
     private Vector3 moveRandomPosition()  
     {
         // 目的地を生成、xとyのポジションをランダムに値を取得 
-        Vector3 randomPosi = new Vector3(Random.Range(leftPos, rightPos), Random.Range(bottomPos,topPos ), 5);
+        Vector3 randomPosi = new Vector3(Random.Range(leftPos, rightPos), Random.Range(bottomPos,topPos ), 0);
 
         //目的地を返す
         return randomPosi;

@@ -14,6 +14,8 @@ public class InosisiController : MonoBehaviour
 
     private AudioSource audioSource;
     [SerializeField] private AudioClip se;
+
+    [SerializeField] GameObject hitPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +32,7 @@ public class InosisiController : MonoBehaviour
         }
         if(Isirusi.sign==true)
         {
+            Instantiate(hitPrefab, transform.position, Quaternion.identity);
             audioSource.PlayOneShot(se);
             Invoke("hyouzi", 2.0f);
             Isirusi.sign = false;

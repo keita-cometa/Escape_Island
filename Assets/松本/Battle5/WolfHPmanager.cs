@@ -21,10 +21,12 @@ public class WolfHPmanager : MonoBehaviour
     Vector3 wolf3pos;
 
     private AudioSource audioSource;
+
     [SerializeField] private AudioClip se1;
     [SerializeField] private AudioClip se2;
     [SerializeField] private AudioClip se3;
 
+    
     [SerializeField] GameObject hitPrefab;
     // Start is called before the first frame update
     void Start()
@@ -49,7 +51,7 @@ public class WolfHPmanager : MonoBehaviour
 
     public void Damage1()
     {
-        Instantiate(hitPrefab, wolf1pos, Quaternion.identity);
+        //wolf1Effect.hiteffect();
         WolfHP1--;
         wolf1 = WolfHP1;
         if (WolfHP1 == 0)
@@ -60,7 +62,7 @@ public class WolfHPmanager : MonoBehaviour
     }
     public void Damage2()
     {
-        Instantiate(hitPrefab, wolf2pos, Quaternion.identity);
+        //wolf2Effect.hiteffect();
         WolfHP2--;
         wolf2 = WolfHP2;
         if (WolfHP2 == 0)
@@ -71,7 +73,7 @@ public class WolfHPmanager : MonoBehaviour
     }
     public void Damage3()
     {
-        Instantiate(hitPrefab, wolf3pos, Quaternion.identity);
+        //wolf3Effect.hiteffect();
         WolfHP3--;
         wolf3 = WolfHP3;
         if (WolfHP3 == 0)

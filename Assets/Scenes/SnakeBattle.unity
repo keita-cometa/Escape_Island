@@ -690,8 +690,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   num: 1
+  speed: 3
   clickedGameObject: {fileID: 1379620833}
   se: {fileID: 8300000, guid: 148309e73ed057744b509a7d3b94c4e0, type: 3}
+  hitPrefab: {fileID: 4021103657954561961, guid: 5c755f9bc5253ea418e919994537dcc7, type: 3}
 --- !u!58 &409771987
 CircleCollider2D:
   m_ObjectHideFlags: 0
