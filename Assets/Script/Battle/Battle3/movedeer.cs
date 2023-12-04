@@ -8,6 +8,7 @@ public class movedeer : MonoBehaviour
     public static float speed = 0.01f;//ˆÚ“®‘¬“x
     public static Vector2 transformpos;
 
+    public GameObject Deer;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,8 +17,11 @@ public class movedeer : MonoBehaviour
     
     // Update is called once per frame
     void Update()
-    {            
-        
+    {
+        //if (StartC.starttf)
+        //{
+        //    GetComponent<Touch>().enabled = true;
+        //}
     }
     private void FixedUpdate()
     {
@@ -34,5 +38,10 @@ public class movedeer : MonoBehaviour
 
         //movepoint‚ð’Ç‚¢‚©‚¯‚é
         transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed);
+
+        if(Touch.B3cnt==0)
+        {
+            Deer.SetActive(false);
+        }
     }
 }

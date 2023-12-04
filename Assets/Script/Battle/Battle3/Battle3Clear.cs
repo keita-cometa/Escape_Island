@@ -14,12 +14,15 @@ public class Battle3Clear : MonoBehaviour
     public int plasnum;//10に足す個数設定
     public Text Goaltext;//クリア個数テキスト
 
+    public GameObject ClearUI;
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip se;
     // Start is called before the first frame update
     void Start()
     {
         Goaltext = GetComponent<Text>();
         GameManager.Battele3Flg = false;
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -31,7 +34,10 @@ public class Battle3Clear : MonoBehaviour
         //goalnumが0になったらクリア関数を呼び出す
         if (Touch.B3cnt == 0)
         {
-            Clear();
+            audioSource.PlayOneShot(se);
+            StartC.onclick = false;
+            ClearUI.SetActive(true);
+            Invoke("Clear", 2.0f);
         }
     }
 

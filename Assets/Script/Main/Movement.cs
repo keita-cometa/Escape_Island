@@ -25,11 +25,17 @@ public class Movement : MonoBehaviour
     Vector3 LeftUP = new Vector2(-9.5f, 3.5f);
     Vector3 LeftDown = new Vector2(-9.5f, -4.5f);
 
+    //上下左右の移動向き仮決定用
     bool UP=false;
     bool DOWN = false;
     bool RIGHT = false;
     bool LEFT = false;
 
+
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip se;
+    //ランダム移動用変数
+    int radvec;
     //bool kadoueFlg;
     //bool kadositaFlg;
 
@@ -41,6 +47,7 @@ public class Movement : MonoBehaviour
             deer.SetActive(false);
         }
         anim = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -56,9 +63,9 @@ public class Movement : MonoBehaviour
 
             //Vector2 direction;
             input = target.position - transform.position;
-            Debug.Log(target.position + "taget");
-            Debug.Log(transform.position + "enemy");
-            Debug.Log(input + "kyori");
+            //Debug.Log(target.position + "taget");
+            //Debug.Log(transform.position + "enemy");
+            //Debug.Log(input + "kyori");
 
 
             //if (transform.position == RightUP || transform.position == LeftUP)
@@ -70,40 +77,80 @@ public class Movement : MonoBehaviour
             //    kadositaFlg = true;
             //}
 
-            if (target.position == transform.position)
+            //主人公から逃げる移動
+            if ((-2<input.x&&input.x<2)||(-2<input.y&&input.y<2))
             {
-                //transform.localScale = transform.localScale;//画像はそのまま
-                return;
+                Debug.Log("nigeru");
+                if (target.position == transform.position)
+                {
+                    //transform.localScale = transform.localScale;//画像はそのまま
+                    return;
+                }
+                else if (input.x >= input.y && input.x > 0)
+                {
+                    Debug.Log("xみぎ");
+                    pos.x -= 2.0f;
+                    pos.y += 0.0f;
+                    LEFT = true;
+                    // transform.localScale = new Vector2(-0.3f, 0.3f);  //画像反転
+                }
+                else if (input.x < input.y && input.x < 0)
+                {
+                    Debug.Log("xひだり");
+                    pos.x += 2.0f;
+                    pos.y += 0.0f;
+                    RIGHT = true;
+                    //transform.localScale = new Vector2(0.3f, 0.3f);  //画像反転
+                }
+                else if (input.x <= input.y && input.y > 0)
+                {
+                    Debug.Log("yうえ");
+                    pos.x += 0.0f;
+                    pos.y -= 2.0f;
+                    DOWN = true;
+                }
+                else if (input.x > input.y && input.y < 0)
+                {
+                    Debug.Log("yした");
+                    pos.x += 0.0f;
+                    pos.y += 2.0f;
+                    UP = true;
+                }
             }
-            else if (input.x >= input.y && input.x > 0)
+            //感知範囲外の時のランダム移動
+            else
             {
-                Debug.Log("xみぎ");
-                pos.x -= 2.0f;
-                pos.y += 0.0f;
-                LEFT = true;
-               // transform.localScale = new Vector2(-0.3f, 0.3f);  //画像反転
-            }
-            else if (input.x < input.y && input.x < 0)
-            {
-                Debug.Log("xひだり");
-                pos.x += 2.0f;
-                pos.y += 0.0f;
-                RIGHT = true;
-                //transform.localScale = new Vector2(0.3f, 0.3f);  //画像反転
-            }
-            else if (input.x <= input.y && input.y > 0)
-            {
-                Debug.Log("yうえ");
-                pos.x += 0.0f;
-                pos.y -= 2.0f;
-                DOWN = true;
-            }
-            else if (input.x > input.y && input.y < 0)
-            {
-                Debug.Log("yした");
-                pos.x += 0.0f;
-                pos.y += 2.0f;
-                UP = true;
+                radvec = Random.Range(0, 4);
+                if (radvec==0)
+                {
+                    Debug.Log("x左");
+                    pos.x -= 2.0f;
+                    pos.y += 0.0f;
+                    LEFT = true;
+                    // transform.localScale = new Vector2(-0.3f, 0.3f);  //画像反転
+                }
+                else if (radvec==1)
+                {
+                    Debug.Log("xみぎ");
+                    pos.x += 2.0f;
+                    pos.y += 0.0f;
+                    RIGHT = true;
+                    //transform.localScale = new Vector2(0.3f, 0.3f);  //画像反転
+                }
+                else if (radvec==2)
+                {
+                    Debug.Log("yした");
+                    pos.x += 0.0f;
+                    pos.y -= 2.0f;
+                    DOWN = true;
+                }
+                else if (radvec==3)
+                {
+                    Debug.Log("yうえ");
+                    pos.x += 0.0f;
+                    pos.y += 2.0f;
+                    UP = true;
+                }
             }
             //else if()
             //{
@@ -136,7 +183,7 @@ public class Movement : MonoBehaviour
             if (input != Vector2.zero)
             {
                 // 入力があった分を目的地にする
-                Debug.Log("if");
+
 
                 //他のコライダーがないかの判定
                 if (UP)
@@ -153,16 +200,12 @@ public class Movement : MonoBehaviour
                 {
                     other_obj = Physics2D.Linecast(transform.position + (transform.right * 2.0f), transform.position, WallLayer);//右方向
                     RIGHT = false;
-                    Debug.Log("migi");
                 }
                 else if (LEFT)
                 {
                     other_obj = Physics2D.Linecast(transform.position - (transform.right * 2.0f), transform.position, WallLayer);//左方向
                     LEFT = false;
-                    Debug.Log("hidari");
-                    Debug.Log(other_obj);
                 }
-
 
                 //||kadoueFlg==true||kadositaFlg==true
 
@@ -234,9 +277,10 @@ public class Movement : MonoBehaviour
         //kadoueFlg = false;
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        PlayerController.isMoving = true;
+        audioSource.PlayOneShot(se);
+        PlayerController.stop = true;
         Invoke("encount", 2.0f);
 
     }
@@ -245,6 +289,6 @@ public class Movement : MonoBehaviour
         SceneManager.LoadScene("BattleScene3");
         ChangeScene1.posnum = 0;
         ChangeScene1.batnum = 3;
-        PlayerController.isMoving = false;
+        PlayerController.stop = false;
     }
 }

@@ -10,7 +10,7 @@ public class StartC : MonoBehaviour
 
     public GameObject StartBotton;//スタートボタン
     public GameObject StartTimeText;//スタートタイムテキスト
-
+    public StartSE SE;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +28,7 @@ public class StartC : MonoBehaviour
 
     public void Load()
     {
+        SE.startSE();
         Invoke("Click", 3.0f);
         starttf = true;
 

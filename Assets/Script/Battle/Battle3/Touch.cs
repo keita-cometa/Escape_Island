@@ -48,7 +48,10 @@ public class Touch : MonoBehaviour
                 audioSource.PlayOneShot(se);
             }
         }
-        
+        //else
+        //{
+        //    clickGameObject.layer = 0;
+        //}
     }
 
     public IEnumerator Indication()

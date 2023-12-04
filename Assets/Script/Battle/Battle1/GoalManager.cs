@@ -27,6 +27,7 @@ public class GoalManager : MonoBehaviour
         //goalnum‚ª0‚É‚È‚Á‚½‚çƒNƒŠƒAŠÖ”‚ğŒÄ‚Ño‚·
         if(TouchsignB.goalnum == 0)
         {
+            TouchsignB.goalnum = 0;
             StartC.onclick = false;
             ClearUI.SetActive(true);
             Invoke("Clear", 3.0f);
