@@ -13,13 +13,13 @@ public class PanelController : MonoBehaviour
     void Start()
     {
         Color Ycolor = yumiya.GetComponent<Renderer>().material.color;
-        Ycolor.a = 0.5f;
+        Ycolor.a = 0.3f;
         Color Hcolor = handle.GetComponent<Renderer>().material.color;
-        Hcolor.a = 0.5f;
+        Hcolor.a = 0.3f;
         Color Pcolor = puropera.GetComponent<Renderer>().material.color;
-        Pcolor.a = 0.5f;
+        Pcolor.a = 0.3f;
         Color Gcolor = gasorin.GetComponent<Renderer>().material.color;
-        Gcolor.a = 0.5f;
+        Gcolor.a = 0.3f;
 
         yumiya.GetComponent<Renderer>().material.color   = Ycolor;
         handle.GetComponent<Renderer>().material.color   = Hcolor;
