@@ -785,6 +785,7 @@ RectTransform:
   - {fileID: 1432030576}
   - {fileID: 177162688}
   - {fileID: 1010482162}
+  - {fileID: 728696686}
   - {fileID: 1436463210}
   m_Father: {fileID: 0}
   m_RootOrder: 8
@@ -931,7 +932,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 463629751}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 5, y: -4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1332,7 +1333,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 704141897}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 5, y: -4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1439,12 +1440,12 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 728696685}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1436463210}
-  m_RootOrder: 1
+  m_Father: {fileID: 385011837}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1523,7 +1524,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 768689442}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 5, y: -4, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2489,9 +2490,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 354864975}
-  - {fileID: 728696686}
   m_Father: {fileID: 385011837}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2606,6 +2606,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartBotton: {fileID: 1436463209}
   StartTimeText: {fileID: 1010482161}
+  setumei: {fileID: 728696685}
   SE: {fileID: 385011838}
 --- !u!82 &1436463216
 AudioSource:
@@ -2944,11 +2945,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 406564229034430767, guid: 43aabdb23720e7649b221fe49651fa0f, type: 3}
       propertyPath: m_Size.y
-      value: 1.3645463
+      value: 2.6119165
       objectReference: {fileID: 0}
     - target: {fileID: 406564229034430767, guid: 43aabdb23720e7649b221fe49651fa0f, type: 3}
       propertyPath: m_Offset.y
-      value: -3.5177267
+      value: -3.1818967
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43aabdb23720e7649b221fe49651fa0f, type: 3}

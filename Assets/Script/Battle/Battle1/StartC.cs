@@ -10,7 +10,9 @@ public class StartC : MonoBehaviour
 
     public GameObject StartBotton;//スタートボタン
     public GameObject StartTimeText;//スタートタイムテキスト
+    public GameObject setumei;
     public StartSE SE;
+
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +36,7 @@ public class StartC : MonoBehaviour
 
         Debug.Log("aaa");
         StartTimeText.SetActive(true);//開始時間表示
-              
+        setumei.SetActive(false);
         StartBotton.SetActive(false);//ボタン非表示
 
     }

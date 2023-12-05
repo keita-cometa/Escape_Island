@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 public class BossGameManager : MonoBehaviour
 {
     public string sceneName;//ì«Ç›çûÇﬁÉVÅ[Éìñº
-
+    public GameObject ClearUI;
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip se;
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -18,8 +20,14 @@ public class BossGameManager : MonoBehaviour
     {
         if(WolfManager.wolfnum==3)
         {
-            SceneManager.LoadScene(sceneName);
-            GameManager.Battele5Flg = true;
+            ClearUI.SetActive(true);
+            audioSource.PlayOneShot(se);
+            Invoke("end", 2.0f);
         }
+    }
+    void end()
+    {
+        SceneManager.LoadScene(sceneName);
+        GameManager.Battele5Flg = true;
     }
 }

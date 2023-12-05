@@ -36,9 +36,11 @@ public class movedeer : MonoBehaviour
             speed = 0.1f;
         }
 
-        //movepoint‚ð’Ç‚¢‚©‚¯‚é
-        transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed);
-
+        if (StartC.onclick)
+        {
+            //movepoint‚ð’Ç‚¢‚©‚¯‚é
+            transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed);
+        }
         if(Touch.B3cnt==0)
         {
             Deer.SetActive(false);
