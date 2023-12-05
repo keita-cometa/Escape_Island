@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public static Vector2 HeroPosition = new Vector2(0.5f, -4.5f);//主人公の位置保存用変数    
+    public static Vector2 HeroPosition = new Vector2(0.5f, -4.5f);//主人公の位置保存用変数     = new Vector2(0.5f, -4.5f);
     public static bool isMoving;// 移動中判定
     public static bool stop;//接触したとき止まらせる
 
