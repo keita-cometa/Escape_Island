@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Diry : MonoBehaviour
+public class idoserch : MonoBehaviour
 {
+    public GameObject idoText;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,8 +16,14 @@ public class Diry : MonoBehaviour
     {
         
     }
-    public void Onclick()
+
+    public void Click()
     {
-        Invoke("ChangeScene.Load", 2.0f);
+        idoText.SetActive(true);
+        Invoke("hide", 2.0f);
+    }
+    void hide()
+    {
+        idoText.SetActive(false);
     }
 }
