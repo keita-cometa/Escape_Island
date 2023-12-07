@@ -6,7 +6,7 @@ public class InosisiController : MonoBehaviour
 {
     private Vector2 pos;
     public int num = 1;
-
+    public int radnum;
     bool voke=true;
     public float speed = 1f;　　　　　// 移動速度
 
@@ -14,7 +14,6 @@ public class InosisiController : MonoBehaviour
 
     private AudioSource audioSource;
     [SerializeField] private AudioClip se;
-
     [SerializeField] GameObject hitPrefab;
     // Start is called before the first frame update
     void Start()
@@ -37,11 +36,12 @@ public class InosisiController : MonoBehaviour
             Invoke("hyouzi", 2.0f);
             Isirusi.sign = false;
         }
-
+        
         pos = transform.position;
 
         // （ポイント）マイナスをかけることで逆方向に移動する。
         transform.Translate(transform.right * Time.deltaTime * speed * num);
+        transform.Translate(transform.up * Time.deltaTime * speed * radnum);
         //Debug.Log(speed);
 
         if (pos.x > 12)
@@ -57,6 +57,14 @@ public class InosisiController : MonoBehaviour
             num = 1;
             
         }
+        if(pos.y>3)
+        {
+            radnum = -1;
+        }
+        if(pos.y<-3)
+        {
+            radnum = 1;
+        }
 
        
 
@@ -66,7 +74,7 @@ public class InosisiController : MonoBehaviour
     {
         // 移動速度をランダムに
         speed = Random.Range(5.0f, 15.0f);
-        
+        radnum= Random.Range(-1,2);
         voke = true;
     }
     void hyouzi()

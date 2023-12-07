@@ -20,7 +20,7 @@ public class Buttoncontro : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(!PlayerController.isMoving)
+        if(!PlayerController.isMoving&&!GameManager.woodFlg)
             Button.SetActive(true);
     
     }

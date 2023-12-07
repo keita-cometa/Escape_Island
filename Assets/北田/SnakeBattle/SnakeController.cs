@@ -6,7 +6,9 @@ public class SnakeController : MonoBehaviour
 {
     private Vector2 pos;
     public int num = 1;
-    public int speed=3;
+    public int speed=4;
+    public float updown=0;
+    float rad;
     private Transform snake1;
     //private bool moving = true;
 
@@ -25,8 +27,9 @@ public class SnakeController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        //しるしをクリックしたときの動作
         if (Ssirusi.sign == true)
         {
             Instantiate(hitPrefab, transform.position, Quaternion.identity);
@@ -35,16 +38,24 @@ public class SnakeController : MonoBehaviour
             Ssirusi.sign = false;
         }
 
+        //蛇行の幅調整
+        rad += 0.1f;
+        if(rad>360)
+        {
+            rad = 0;
+        }
+
+        //現在位置保存
         pos = transform.position;
 
         // （ポイント）マイナスをかけることで逆方向に移動する。
         transform.Translate(transform.right * Time.deltaTime * speed * num);
-
+        transform.Translate(transform.up * Time.deltaTime * speed * updown);
         if (pos.x > -2)
         {
             num = -1;
         }
-
+        updown = Mathf.Sin(rad);
         if(pos.x<-12)
         {
             radpos = Random.Range(1, 5);
@@ -57,10 +68,34 @@ public class SnakeController : MonoBehaviour
                     snake1.localPosition = new Vector2(11, -2);
             if (radpos == 4)
                     snake1.localPosition = new Vector2(11, -3);
+            
         }
-        if(Ssirusi.sign)
+        
+        if(pos.y>5)
         {
-            speed = 10;
+            radpos = Random.Range(1, 5);
+            if (radpos == 1)
+                snake1.localPosition = new Vector2(11, 2);
+            if (radpos == 2)
+                snake1.localPosition = new Vector2(11, 0);
+            if (radpos == 3)
+                snake1.localPosition = new Vector2(11, -2);
+            if (radpos == 4)
+                snake1.localPosition = new Vector2(11, -3);
+            
+        }
+        if(pos.y<-7)
+        {
+            radpos = Random.Range(1, 5);
+            if (radpos == 1)
+                snake1.localPosition = new Vector2(11, 2);
+            if (radpos == 2)
+                snake1.localPosition = new Vector2(11, 0);
+            if (radpos == 3)
+                snake1.localPosition = new Vector2(11, -2);
+            if (radpos == 4)
+                snake1.localPosition = new Vector2(11, -3);
+            updown = Random.Range(1, 2);
         }
 
         //if (Input.GetMouseButtonDown(0))

@@ -566,3 +566,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: TitleScene
+  videoPlayer: {fileID: 1470909733}

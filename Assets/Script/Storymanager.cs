@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Video;
 
 public class Storymanager : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class Storymanager : MonoBehaviour
 
     Color fadeColor = Color.black;
     float fadespeed = 1.0f;
+
+    public VideoPlayer videoPlayer;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +26,10 @@ public class Storymanager : MonoBehaviour
         if (Input.anyKey || Input.GetMouseButton(0) || Input.GetMouseButton(1) || Input.GetMouseButton(2))
         {
             //audioSource.PlayOneShot(se);
+            Initiate.Fade(sceneName, fadeColor, fadespeed);
+        }
+        if((ulong)videoPlayer.frame == videoPlayer.frameCount)
+        {
             Initiate.Fade(sceneName, fadeColor, fadespeed);
         }
     }

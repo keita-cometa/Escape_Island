@@ -65,7 +65,7 @@ public class Movement : MonoBehaviour
             input = target.position - transform.position;
             //Debug.Log(target.position + "taget");
             //Debug.Log(transform.position + "enemy");
-            //Debug.Log(input + "kyori");
+            Debug.Log(input + "kyori");
 
 
             //if (transform.position == RightUP || transform.position == LeftUP)
@@ -78,7 +78,7 @@ public class Movement : MonoBehaviour
             //}
 
             //ålŒö‚©‚ç“¦‚°‚éˆÚ“®
-            if ((-2<input.x&&input.x<2)||(-2<input.y&&input.y<2))
+            if ((-4<=input.x&&input.x<=4)&&(-4<=input.y&&input.y<=4))
             {
                 Debug.Log("nigeru");
                 if (target.position == transform.position)
@@ -92,7 +92,7 @@ public class Movement : MonoBehaviour
                     pos.x -= 2.0f;
                     pos.y += 0.0f;
                     LEFT = true;
-                    // transform.localScale = new Vector2(-0.3f, 0.3f);  //‰æ‘œ”½“]
+                    transform.localScale = new Vector2(0.5f, 0.5f);  //‰æ‘œ”½“]
                 }
                 else if (input.x < input.y && input.x < 0)
                 {
@@ -100,7 +100,7 @@ public class Movement : MonoBehaviour
                     pos.x += 2.0f;
                     pos.y += 0.0f;
                     RIGHT = true;
-                    //transform.localScale = new Vector2(0.3f, 0.3f);  //‰æ‘œ”½“]
+                    transform.localScale = new Vector2(-0.5f, 0.5f);  //‰æ‘œ”½“]
                 }
                 else if (input.x <= input.y && input.y > 0)
                 {
@@ -127,7 +127,7 @@ public class Movement : MonoBehaviour
                     pos.x -= 2.0f;
                     pos.y += 0.0f;
                     LEFT = true;
-                    // transform.localScale = new Vector2(-0.3f, 0.3f);  //‰æ‘œ”½“]
+                    transform.localScale = new Vector2(0.5f, 0.5f);  //‰æ‘œ”½“]
                 }
                 else if (radvec==1)
                 {
@@ -135,7 +135,7 @@ public class Movement : MonoBehaviour
                     pos.x += 2.0f;
                     pos.y += 0.0f;
                     RIGHT = true;
-                    //transform.localScale = new Vector2(0.3f, 0.3f);  //‰æ‘œ”½“]
+                    transform.localScale = new Vector2(-0.5f, 0.5f);  //‰æ‘œ”½“]
                 }
                 else if (radvec==2)
                 {
