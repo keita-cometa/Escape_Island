@@ -28,8 +28,14 @@ public class ChangeScene1 : MonoBehaviour
 
     public void Load()
     {
+        PlayerController.stop = true;
+        Invoke("hide", 1.0f);
         Initiate.Fade(sceneName, fadeColor, fadespeed);
         posnum = mnum;
         batnum = bnum;
+    }
+    void hide()
+    {
+        PlayerController.stop = false;
     }
 }

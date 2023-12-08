@@ -221,11 +221,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7196174281871252579, guid: 8aefd0ce25590a846bb7f6cbde2da937, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.5261273
+      value: 0.12669992
       objectReference: {fileID: 0}
     - target: {fileID: 7196174281871252579, guid: 8aefd0ce25590a846bb7f6cbde2da937, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.45919
+      value: 0.31739998
       objectReference: {fileID: 0}
     - target: {fileID: 7196174281871252579, guid: 8aefd0ce25590a846bb7f6cbde2da937, type: 3}
       propertyPath: m_LocalPosition.z
@@ -789,7 +789,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.086
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -954,11 +954,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7196174281871252579, guid: 8aefd0ce25590a846bb7f6cbde2da937, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.229427
+      value: 6.83
       objectReference: {fileID: 0}
     - target: {fileID: 7196174281871252579, guid: 8aefd0ce25590a846bb7f6cbde2da937, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.62659
+      value: 0.14999998
       objectReference: {fileID: 0}
     - target: {fileID: 7196174281871252579, guid: 8aefd0ce25590a846bb7f6cbde2da937, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1314,7 +1314,7 @@ MonoBehaviour:
   rightPos: 2
   keikatime: 0
   Attacktime: 3
-  PHP: 10
+  PHP: 12
   activetime: 3
   sceneName: GameoverScene
   wolfManager: {fileID: 1611733598}
@@ -1864,7 +1864,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1611733597}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.3994274, y: 1.77659, z: -9.981671}
+  m_LocalPosition: {x: 0, y: 0, z: -9.981671}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2086,7 +2086,7 @@ MonoBehaviour:
   rightPos: -2
   keikatime: 0
   Attacktime: 4
-  PHP: 10
+  PHP: 11
   activetime: 3
   sceneName: GameoverScene
   wolfManager: {fileID: 1611733598}
@@ -2392,13 +2392,13 @@ MonoBehaviour:
   hpManager: {fileID: 2023941750}
   Wolf: {fileID: 2115405162}
   weakPoint: {fileID: 781231028}
-  movespeed: 4
+  movespeed: 5
   topPos: 3
   bottomPos: -3
   leftPos: 3
   rightPos: 7
   keikatime: 0
-  Attacktime: 5
+  Attacktime: 4
   PHP: 10
   activetime: 3
   sceneName: GameoverScene
@@ -2490,11 +2490,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7196174281871252579, guid: 8aefd0ce25590a846bb7f6cbde2da937, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.0505724
+      value: -6.45
       objectReference: {fileID: 0}
     - target: {fileID: 7196174281871252579, guid: 8aefd0ce25590a846bb7f6cbde2da937, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.18659
+      value: -0.40999997
       objectReference: {fileID: 0}
     - target: {fileID: 7196174281871252579, guid: 8aefd0ce25590a846bb7f6cbde2da937, type: 3}
       propertyPath: m_LocalPosition.z

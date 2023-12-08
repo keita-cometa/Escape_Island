@@ -23,6 +23,7 @@ public class craftArea : MonoBehaviour
     {
         if(!GameManager.BowFlg)
             BowButton.SetActive(true);
+        if(!GameManager.HandleFlg)
             HandleButton.SetActive(true);
     }
 
