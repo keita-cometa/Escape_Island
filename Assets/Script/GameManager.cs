@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
     public static int meinnum;//どのメインシーンに移動するかの変数
     public static int battelenum;//どのバトルシーンに移動するかの変数
 
+    public static bool Hellmode=false;
     // Start is called before the first frame update
     void Start()
     {

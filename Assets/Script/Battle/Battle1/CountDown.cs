@@ -21,6 +21,10 @@ public class CountDown : MonoBehaviour
     void Start()
     {
         startc = GetComponent<StartC>();
+        if(GameManager.Hellmode)
+        {
+            countdown -= 10;
+        }
     }
 
     // Update is called once per frame

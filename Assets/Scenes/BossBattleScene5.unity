@@ -1314,7 +1314,7 @@ MonoBehaviour:
   rightPos: 2
   keikatime: 0
   Attacktime: 3
-  PHP: 12
+  PHP: 10
   activetime: 3
   sceneName: GameoverScene
   wolfManager: {fileID: 1611733598}
@@ -1849,9 +1849,9 @@ MonoBehaviour:
   Wolf1: {fileID: 1740009575}
   Wolf2: {fileID: 112033596}
   Wolf3: {fileID: 2115405162}
-  wolf1: 0
-  wolf2: 0
-  wolf3: 0
+  wolf1: 10
+  wolf2: 13
+  wolf3: 12
   se1: {fileID: 8300000, guid: 19b5c879c2a1cf846a5e55d6b0492482, type: 3}
   se2: {fileID: 8300000, guid: 148309e73ed057744b509a7d3b94c4e0, type: 3}
   se3: {fileID: 8300000, guid: f55e5e74737124640b80e60d66e2bf01, type: 3}
@@ -2086,7 +2086,7 @@ MonoBehaviour:
   rightPos: -2
   keikatime: 0
   Attacktime: 4
-  PHP: 11
+  PHP: 10
   activetime: 3
   sceneName: GameoverScene
   wolfManager: {fileID: 1611733598}

@@ -17,6 +17,10 @@ public class GoalManager2 : MonoBehaviour
     {
         Goaltext = GetComponent<Text>();
         TouchsignB.goalnum = plasnum;
+        if (GameManager.Hellmode)
+        {
+            TouchsignB.goalnum += 10;
+        }
     }
 
     // Update is called once per frame

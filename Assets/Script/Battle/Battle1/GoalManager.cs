@@ -8,7 +8,7 @@ public class GoalManager : MonoBehaviour
 {
     public string sceneName;//読み込むシーン名
 
-    public int plasnum;//10に足す個数設定
+    public int plasnum;//クリア個数
     public Text Goaltext;//クリア個数テキスト
     public GameObject ClearUI;
     // Start is called before the first frame update
@@ -16,6 +16,10 @@ public class GoalManager : MonoBehaviour
     {
         Goaltext = GetComponent<Text>();
         TouchsignB.goalnum += plasnum;
+        if(GameManager.Hellmode)
+        {
+            TouchsignB.goalnum += 10;
+        }
     }
 
     // Update is called once per frame

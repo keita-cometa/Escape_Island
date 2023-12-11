@@ -36,6 +36,10 @@ public class WolfManager : MonoBehaviour
     {
         movePosition = moveRandomPosition();//オブジェクトの目的地を設定
         anim = GetComponent<Animator>();
+        if(GameManager.Hellmode)
+        {
+            PHP = 5;
+        }
     }
 
     // Update is called once per frame

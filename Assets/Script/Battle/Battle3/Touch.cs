@@ -10,7 +10,8 @@ public class Touch : MonoBehaviour
     public static bool click;
 
     private AudioSource audioSource;
-    [SerializeField] private AudioClip se;
+    [SerializeField] private AudioClip se1;
+
 
     public static int B3cnt=10;
     private int cnt;
@@ -24,6 +25,10 @@ public class Touch : MonoBehaviour
         B3cnt = 10;
         click = false;
         audioSource = GetComponent<AudioSource>();
+        if(GameManager.Hellmode)
+        {
+            B3cnt = 13;
+        }
     }
 
     //ƒNƒŠƒbƒN‚³‚ê‚½‚ç
@@ -34,6 +39,7 @@ public class Touch : MonoBehaviour
             //”½‰ž‚µ‚Ä‚Ù‚µ‚­‚È‚¢‚Æ‚«
             if (click == true||StartC.starttf==false|| direction.obstacles == true)
             {
+
                 Debug.Log("NO");
                 return;
              }
@@ -45,7 +51,7 @@ public class Touch : MonoBehaviour
                 click = true;
                 StartCoroutine(Indication());
                 B3cnt--;
-                audioSource.PlayOneShot(se);
+                audioSource.PlayOneShot(se1);
             }
         }
         //else

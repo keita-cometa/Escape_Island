@@ -25,7 +25,7 @@ public class messegeManager : MonoBehaviour
             craftmessege.SetActive(true);
         }
         //‹|–îì¬Œã
-        if(!GameManager.Battele3Flg&&!GameManager.woodFlg)
+        if(!GameManager.Battele3Flg&&!GameManager.woodFlg&&GameManager.BowFlg)
         {
             handlemessege.SetActive(true);
         }
@@ -39,7 +39,7 @@ public class messegeManager : MonoBehaviour
         {
             clearmessege.SetActive(true);
         }
-        else
+        if(GameManager.HandleFlg)
         {
             colectmessege.SetActive(true);
         }

@@ -197,7 +197,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 13
+  m_Text: 10
 --- !u!222 &177162691
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1608,7 +1608,7 @@ MonoBehaviour:
   clickGameObject: {fileID: 1297955411}
   indication_time: 1
   target: {fileID: 704141897}
-  se: {fileID: 8300000, guid: 148309e73ed057744b509a7d3b94c4e0, type: 3}
+  se1: {fileID: 8300000, guid: 148309e73ed057744b509a7d3b94c4e0, type: 3}
   hitPrefab: {fileID: 4021103657954561961, guid: 5c755f9bc5253ea418e919994537dcc7, type: 3}
 --- !u!114 &768689452
 MonoBehaviour:

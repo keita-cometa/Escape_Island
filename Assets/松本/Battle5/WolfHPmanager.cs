@@ -36,6 +36,13 @@ public class WolfHPmanager : MonoBehaviour
         WolfHP2 = 13;
         WolfHP3 = 12;
 
+        if(GameManager.Hellmode)
+        {
+            WolfHP1 = 20;
+            WolfHP2 = 26;
+            WolfHP3 = 24;
+        }
+
         wolf1pos = new Vector3(Wolf1.transform.position.x, Wolf1.transform.position.y, Wolf1.transform.position.z);
         wolf2pos = new Vector3(Wolf2.transform.position.x, Wolf2.transform.position.y, Wolf2.transform.position.z);
         wolf3pos = new Vector3(Wolf3.transform.position.x, Wolf3.transform.position.y, Wolf3.transform.position.z);
