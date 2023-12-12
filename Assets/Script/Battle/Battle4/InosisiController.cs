@@ -73,7 +73,7 @@ public class InosisiController : MonoBehaviour
     void Speed()
     {
         // ˆÚ“®‘¬“x‚ðƒ‰ƒ“ƒ_ƒ€‚É
-        speed = Random.Range(5.0f, 15.0f);
+        speed = Random.Range(5.0f, 10.0f);
         radnum= Random.Range(-1,2);
         voke = true;
     }

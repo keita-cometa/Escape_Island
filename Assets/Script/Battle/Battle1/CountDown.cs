@@ -23,7 +23,7 @@ public class CountDown : MonoBehaviour
         startc = GetComponent<StartC>();
         if(GameManager.Hellmode)
         {
-            countdown -= 10;
+            countdown = 30;
         }
     }
 

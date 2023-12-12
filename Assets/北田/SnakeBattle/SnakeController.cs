@@ -6,7 +6,7 @@ public class SnakeController : MonoBehaviour
 {
     private Vector2 pos;
     public int num = 1;
-    public int speed=4;
+    public float speed=4;
     public float updown=0;
     float rad;
     private Transform snake1;
@@ -98,6 +98,11 @@ public class SnakeController : MonoBehaviour
             updown = Random.Range(1, 2);
         }
 
+        speed += 0.001f;
+        if(Ssirusi.Sclearnum==6)
+        {
+            speed = 7f;
+        }
         //if (Input.GetMouseButtonDown(0))
         //{
 

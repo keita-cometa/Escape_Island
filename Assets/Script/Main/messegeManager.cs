@@ -30,7 +30,7 @@ public class messegeManager : MonoBehaviour
             handlemessege.SetActive(true);
         }
         //ƒnƒ“ƒhƒ‹Ş—¿ûWŒã
-        if(GameManager.Battele3Flg&&GameManager.woodFlg)
+        if(GameManager.Battele3Flg&&GameManager.woodFlg&&!GameManager.HandleFlg)
         {
             craftmessege2.SetActive(true);
         }
@@ -39,7 +39,7 @@ public class messegeManager : MonoBehaviour
         {
             clearmessege.SetActive(true);
         }
-        if(GameManager.HandleFlg)
+        if(GameManager.HandleFlg&&!GameManager.GasFlg&&!GameManager.puroperaFlg)
         {
             colectmessege.SetActive(true);
         }
