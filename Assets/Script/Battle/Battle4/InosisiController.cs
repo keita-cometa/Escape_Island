@@ -11,6 +11,8 @@ public class InosisiController : MonoBehaviour
     public float speed = 1f;　　　　　// 移動速度
 
     public GameObject clickedGameObject;
+    public Renderer InosisiSprite;
+    public Renderer sirusiSprite;
 
     private AudioSource audioSource;
     [SerializeField] private AudioClip se;
@@ -66,8 +68,16 @@ public class InosisiController : MonoBehaviour
             radnum = 1;
         }
 
-       
-
+        //真ん中の茂みの重なり部分
+        if(-3<pos.x&&pos.x<3&&-4<pos.y&&pos.y<-2)
+        {
+            InosisiSprite.sortingOrder = 4;
+            sirusiSprite.sortingOrder = 5;
+        }
+        else
+        {
+            InosisiSprite.sortingOrder = 1;
+        }
     }
 
     void Speed()

@@ -11,6 +11,8 @@ public class GoalManager : MonoBehaviour
     public int plasnum;//クリア個数
     public Text Goaltext;//クリア個数テキスト
     public GameObject ClearUI;
+
+    private Animator anim = null;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,7 @@ public class GoalManager : MonoBehaviour
         {
             TouchsignB.goalnum += 10;
         }
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -28,6 +31,13 @@ public class GoalManager : MonoBehaviour
         //目標個数表示
         Goaltext.text = TouchsignB.goalnum.ToString("0");
 
+        if(TouchsignB.animFlg)
+        {
+            anim.SetBool("hit", true);
+            TouchsignB.animFlg = false;
+            Invoke("ani", 1.0f);
+        }
+        
         //goalnumが0になったらクリア関数を呼び出す
         if(TouchsignB.goalnum == 0)
         {
@@ -43,5 +53,9 @@ public class GoalManager : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
         GameManager.Battele1Flg = true;
+    }
+    void ani()
+    {
+        anim.SetBool("hit", false);
     }
 }

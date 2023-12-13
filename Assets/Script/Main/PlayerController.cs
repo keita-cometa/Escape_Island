@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float moveSpeed;
 
     private Animator anim = null;
-
+    public GameObject Player;
     // Start is called before the first frame update
     void Start()
     {
@@ -117,6 +117,10 @@ public class PlayerController : MonoBehaviour
         }
         HeroPosition = this.transform.position;//現在の位置を保存する
 
+        if(GameManager.ClearFlg)
+        {
+            Player.SetActive(false);
+        }
         //アニメーション制御
         //float horizontalKey = Input.GetAxis("Horizontal");
         //float verticalKey = Input.GetAxis("Vertical");

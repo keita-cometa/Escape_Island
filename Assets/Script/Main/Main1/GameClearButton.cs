@@ -41,6 +41,7 @@ public class GameClearButton : MonoBehaviour
         if(GameManager.HandleFlg&& GameManager.GasFlg&& GameManager.puroperaFlg)
         {
             Escape.SetActive(true);
+            GameManager.ClearFlg = true;
             Invoke("Clear", 2.0f);
         }
     }

@@ -688,6 +688,8 @@ MonoBehaviour:
   radnum: 0
   speed: 3
   clickedGameObject: {fileID: 253677432}
+  InosisiSprite: {fileID: 0}
+  sirusiSprite: {fileID: 0}
   se: {fileID: 0}
   hitPrefab: {fileID: 0}
 --- !u!50 &358612233
@@ -837,7 +839,7 @@ RectTransform:
   - {fileID: 174680618}
   - {fileID: 1436463210}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1019,7 +1021,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &782363506
 PrefabInstance:
@@ -1299,7 +1301,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &845827790
 GameObject:
@@ -1338,6 +1340,8 @@ MonoBehaviour:
   radnum: 0
   speed: 1
   clickedGameObject: {fileID: 1047115536}
+  InosisiSprite: {fileID: 845827795}
+  sirusiSprite: {fileID: 0}
   se: {fileID: 8300000, guid: 148309e73ed057744b509a7d3b94c4e0, type: 3}
   hitPrefab: {fileID: 4021103657954561961, guid: 5c755f9bc5253ea418e919994537dcc7, type: 3}
 --- !u!61 &845827793
@@ -1452,7 +1456,7 @@ Transform:
   m_Children:
   - {fileID: 1047115540}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &845827797
 AudioSource:
@@ -2225,7 +2229,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1247898237
 BoxCollider2D:
@@ -2335,7 +2339,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1412341967
 GameObject:

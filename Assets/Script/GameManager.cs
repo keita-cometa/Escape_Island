@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public static bool puroperaFlg   = false;//プロペラ取ったかどうか判別
     public static bool GasFlg        = false;//ガソリン取ったかどうか判別
     public static bool woodFlg       = false;//メイン３の木取ったかどうか判別
+    public static bool ClearFlg      = false;//ゲームクリアしたかどうか判別
 
     //各シーンロード時の出現場所設定
     public static Vector3 M1_1pos = new Vector3(-1.5f,  3.5f, 0);//メイン1の出現場所     1
@@ -35,7 +36,8 @@ public class GameManager : MonoBehaviour
     public static int meinnum;//どのメインシーンに移動するかの変数
     public static int battelenum;//どのバトルシーンに移動するかの変数
 
-    public static bool Hellmode=false;
+    public static bool Hellmode=false;//ヘルモード判定
+
     // Start is called before the first frame update
     void Start()
     {
