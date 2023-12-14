@@ -1123,6 +1123,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   moveSpeed: 2
+  Player: {fileID: 0}
 --- !u!50 &520600129
 Rigidbody2D:
   serializedVersion: 4
@@ -1886,6 +1887,7 @@ GameObject:
   - component: {fileID: 797406112}
   - component: {fileID: 797406118}
   - component: {fileID: 797406117}
+  - component: {fileID: 797406119}
   m_Layer: 5
   m_Name: ChangeMapButton main1
   m_TagString: Untagged
@@ -2148,6 +2150,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &797406119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797406111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cea98ee7936e34448a3d55ab0d9e70a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enter_key: 13
 --- !u!1 &840986981
 GameObject:
   m_ObjectHideFlags: 0
@@ -2357,6 +2372,7 @@ GameObject:
   - component: {fileID: 900270405}
   - component: {fileID: 900270404}
   - component: {fileID: 900270407}
+  - component: {fileID: 900270408}
   m_Layer: 5
   m_Name: 'BowButton '
   m_TagString: Untagged
@@ -2506,6 +2522,19 @@ MonoBehaviour:
   itemtext: {fileID: 793015151}
   Button: {fileID: 900270402}
   Yazirusi: {fileID: 416136199}
+--- !u!114 &900270408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900270402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cea98ee7936e34448a3d55ab0d9e70a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enter_key: 13
 --- !u!1 &939963556
 GameObject:
   m_ObjectHideFlags: 0
@@ -3639,6 +3668,7 @@ GameObject:
   - component: {fileID: 1180684266}
   - component: {fileID: 1180684267}
   - component: {fileID: 1180684268}
+  - component: {fileID: 1180684269}
   m_Layer: 5
   m_Name: ChangeMapButton main3
   m_TagString: Untagged
@@ -3901,6 +3931,19 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &1180684269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180684260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cea98ee7936e34448a3d55ab0d9e70a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enter_key: 13
 --- !u!1 &1293225298
 GameObject:
   m_ObjectHideFlags: 0
@@ -4275,6 +4318,7 @@ GameObject:
   - component: {fileID: 1466458131}
   - component: {fileID: 1466458130}
   - component: {fileID: 1466458133}
+  - component: {fileID: 1466458134}
   m_Layer: 5
   m_Name: 'HandleButton '
   m_TagString: Untagged
@@ -4424,6 +4468,19 @@ MonoBehaviour:
   Handlebutton: {fileID: 1466458128}
   gettext: {fileID: 744384615}
   misstext: {fileID: 410374282}
+--- !u!114 &1466458134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466458128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cea98ee7936e34448a3d55ab0d9e70a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enter_key: 13
 --- !u!1 &1481382226
 GameObject:
   m_ObjectHideFlags: 0
@@ -5335,7 +5392,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 5be459d149888a24fafc5c986852d29c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
