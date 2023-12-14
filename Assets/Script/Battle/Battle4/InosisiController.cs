@@ -69,14 +69,27 @@ public class InosisiController : MonoBehaviour
         }
 
         //真ん中の茂みの重なり部分
-        if(-3<pos.x&&pos.x<3&&-4<pos.y&&pos.y<-2)
+        if((-2.5<pos.x&&pos.x<2.5)&&(-5<pos.y&&pos.y<-3.5))
         {
             InosisiSprite.sortingOrder = 4;
-            sirusiSprite.sortingOrder = 5;
+            sirusiSprite.sortingOrder = 6;
+        }
+        //左の茂みの重なり部分
+        else if((-8<pos.x&&pos.x<-4.5)&&(-0.5<pos.y&&pos.y<0))
+        {
+            InosisiSprite.sortingOrder = 4;
+            sirusiSprite.sortingOrder = 6;
+        }
+        //右の茂みの重なり部分
+        else if((4.5<pos.x&&pos.x<8.5)&&(-2.5<pos.y&&pos.y<-1.75))
+        {
+            InosisiSprite.sortingOrder = 4;
+            sirusiSprite.sortingOrder = 6;
         }
         else
         {
             InosisiSprite.sortingOrder = 1;
+            sirusiSprite.sortingOrder = 2;
         }
     }
 

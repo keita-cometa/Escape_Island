@@ -1341,7 +1341,7 @@ MonoBehaviour:
   speed: 1
   clickedGameObject: {fileID: 1047115536}
   InosisiSprite: {fileID: 845827795}
-  sirusiSprite: {fileID: 0}
+  sirusiSprite: {fileID: 1047115539}
   se: {fileID: 8300000, guid: 148309e73ed057744b509a7d3b94c4e0, type: 3}
   hitPrefab: {fileID: 4021103657954561961, guid: 5c755f9bc5253ea418e919994537dcc7, type: 3}
 --- !u!61 &845827793
@@ -1450,7 +1450,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 845827790}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.17, y: -2.1, z: 0}
+  m_LocalPosition: {x: 13.03, y: -2.75, z: 0}
   m_LocalScale: {x: 0.51368713, y: 0.51368713, z: 0.51368713}
   m_ConstrainProportionsScale: 0
   m_Children:
