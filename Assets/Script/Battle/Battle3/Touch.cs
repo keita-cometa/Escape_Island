@@ -14,7 +14,7 @@ public class Touch : MonoBehaviour
 
 
     public static int B3cnt=10;
-    private int cnt;
+    public static int hpcnt = 0;
 
     //エフェクト用
     [SerializeField] GameObject hitPrefab;
@@ -51,6 +51,7 @@ public class Touch : MonoBehaviour
                 click = true;
                 StartCoroutine(Indication());
                 B3cnt--;
+                hpcnt++;
                 audioSource.PlayOneShot(se1);
             }
         }
