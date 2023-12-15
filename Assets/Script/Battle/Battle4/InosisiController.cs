@@ -96,14 +96,20 @@ public class InosisiController : MonoBehaviour
     void Speed()
     {
         // ˆÚ“®‘¬“x‚ğƒ‰ƒ“ƒ_ƒ€‚É
-        speed = Random.Range(5.0f, 10.0f);
-        radnum= Random.Range(-1,2);
+        if(GameManager.Hellmode)
+        {
+            speed = Random.Range(7.0f, 15f);
+        }
+        else
+        {
+            speed = Random.Range(5.0f, 10.0f);
+        }
+        radnum= Random.Range(-1,2);//ã‰ºˆÚ“®
         voke = true;
     }
     void hyouzi()
     {
         clickedGameObject.SetActive(true);
-       
     }
 
     //private void OnTriggerEnter2D(Collider2D collision)

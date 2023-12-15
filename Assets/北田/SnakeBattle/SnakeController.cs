@@ -12,13 +12,16 @@ public class SnakeController : MonoBehaviour
     private Transform snake1;
     //private bool moving = true;
 
-    int radpos;
-    public GameObject clickedGameObject;
+    int radpos;//再生成場所
+    public GameObject clickedGameObject;//しるし
 
+    //SE
     private AudioSource audioSource;
     [SerializeField] private AudioClip se;
 
-    [SerializeField] GameObject hitPrefab;
+    bool kirikae = false;
+
+    [SerializeField] GameObject hitPrefab;//エフェクト
     // Start is called before the first frame update
     void Start()
     {
@@ -55,6 +58,11 @@ public class SnakeController : MonoBehaviour
         {
             num = -1;
         }
+        if(pos.x<0&&kirikae==false)
+        {
+            num = Random.Range(-1, 1);
+            kirikae = true;
+        }
         updown = Mathf.Sin(rad);
         if(pos.x<-12)
         {
@@ -68,7 +76,7 @@ public class SnakeController : MonoBehaviour
                     snake1.localPosition = new Vector2(11, -2);
             if (radpos == 4)
                     snake1.localPosition = new Vector2(11, -3);
-            
+            kirikae = false;
         }
         
         if(pos.y>5)
@@ -82,7 +90,7 @@ public class SnakeController : MonoBehaviour
                 snake1.localPosition = new Vector2(11, -2);
             if (radpos == 4)
                 snake1.localPosition = new Vector2(11, -3);
-            
+            kirikae = false;
         }
         if(pos.y<-7)
         {
@@ -96,6 +104,7 @@ public class SnakeController : MonoBehaviour
             if (radpos == 4)
                 snake1.localPosition = new Vector2(11, -3);
             updown = Random.Range(1, 2);
+            kirikae = false;
         }
 
         speed += 0.001f;
