@@ -7,6 +7,7 @@ public class UImanager : MonoBehaviour
     public GameObject GameClear;
     public GameObject atogaki;
     public GameObject titleButton;
+    public GameObject Omake;
 
     // Start is called before the first frame update
     void Start()
@@ -14,6 +15,7 @@ public class UImanager : MonoBehaviour
         GameClear.SetActive(true);
         atogaki.SetActive(false);
         titleButton.SetActive(false);
+        Omake.SetActive(false);
     }
 
     // Update is called once per frame
@@ -32,5 +34,6 @@ public class UImanager : MonoBehaviour
     void End()
     {
         titleButton.SetActive(true);
+        Omake.SetActive(true);
     }
 }

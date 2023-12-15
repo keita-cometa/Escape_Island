@@ -178,5 +178,12 @@ public class PlayerController : MonoBehaviour
         isMoving = false;
     }
 
-    
+    private void OnTriggerStay(Collider other)
+    {
+        if(other.gameObject.CompareTag("Area"))
+        {
+
+        }
+    }
+
 }

@@ -599,6 +599,7 @@ GameObject:
   - component: {fileID: 1147593016}
   - component: {fileID: 1147593015}
   - component: {fileID: 1147593014}
+  - component: {fileID: 1147593018}
   - component: {fileID: 1147593017}
   m_Layer: 5
   m_Name: NextButton
@@ -734,6 +735,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3b2dbfb1fe41964e851f2777c860291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1147593018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147593012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cea98ee7936e34448a3d55ab0d9e70a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enter_key: 13
 --- !u!1 &1163045024
 GameObject:
   m_ObjectHideFlags: 0

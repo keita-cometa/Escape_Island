@@ -20,7 +20,7 @@ public class TouchsignB : MonoBehaviour
     {
         rbody2D = GetComponent<Rigidbody2D>();
         cnt = 0;
-        wind = Random.RandomRange(-1.3f, 1.3f);
+        wind = Random.Range(-15f,15f);
     }
 
 
@@ -48,13 +48,17 @@ public class TouchsignB : MonoBehaviour
             }
         }
 
-        if (transform.position.y < 4)
-        {
-            this.rbody2D.AddForce(transform.right * wind);
-            
-        }
+      
         
         
     }
-   
+    private void FixedUpdate()
+    {
+        if (transform.position.y < 4)
+        {
+            this.rbody2D.AddForce(transform.right * wind);
+
+        }
+    }
+
 }
