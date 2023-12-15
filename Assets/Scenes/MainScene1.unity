@@ -1715,6 +1715,7 @@ GameObject:
   - component: {fileID: 752196393}
   - component: {fileID: 752196392}
   - component: {fileID: 752196396}
+  - component: {fileID: 752196398}
   - component: {fileID: 752196397}
   m_Layer: 5
   m_Name: NextStageBotton
@@ -1978,6 +1979,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &752196398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752196390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cea98ee7936e34448a3d55ab0d9e70a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enter_key: 13
 --- !u!1 &783939442 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4843803403476584829, guid: 6e2ca308149533b43be1a19717ae21ad, type: 3}
@@ -5650,6 +5664,7 @@ GameObject:
   - component: {fileID: 2069595125}
   - component: {fileID: 2069595124}
   - component: {fileID: 2069595127}
+  - component: {fileID: 2069595128}
   m_Layer: 5
   m_Name: GameClearButton
   m_TagString: Untagged
@@ -5788,6 +5803,19 @@ MonoBehaviour:
   puroperaNo: {fileID: 2015283317}
   handleNo: {fileID: 1961000897}
   Escape: {fileID: 1798021352}
+--- !u!114 &2069595128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069595122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cea98ee7936e34448a3d55ab0d9e70a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enter_key: 13
 --- !u!1001 &3526032720055932868
 PrefabInstance:
   m_ObjectHideFlags: 0

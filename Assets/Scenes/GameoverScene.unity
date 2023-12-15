@@ -1341,6 +1341,7 @@ GameObject:
   - component: {fileID: 2073321895}
   - component: {fileID: 2073321894}
   - component: {fileID: 2073321893}
+  - component: {fileID: 2073321897}
   - component: {fileID: 2073321896}
   m_Layer: 5
   m_Name: RetryButton
@@ -1476,3 +1477,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b081575c94d334181e3d07d1102811, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2073321897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073321891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cea98ee7936e34448a3d55ab0d9e70a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enter_key: 13
