@@ -48,6 +48,19 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(ClearFlg)
+        {
+            Battele1Flg = false;
+            Battele3Flg = false;
+            Battele4_1Flg = false;
+            Battele4_2Flg = false;
+            Battele5Flg = false;
+            BowFlg = false;
+            HandleFlg = false;
+            puroperaFlg = false;
+            GasFlg = false;
+            woodFlg = false;
+            ClearFlg = false;
+        }
     }
 }

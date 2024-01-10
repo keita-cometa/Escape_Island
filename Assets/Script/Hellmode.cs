@@ -34,6 +34,7 @@ public class Hellmode : MonoBehaviour
     }
     public void Click()
     {
+        
         GameManager.Hellmode = true;
         audioSource.PlayOneShot(se);
         text.SetActive(true);
