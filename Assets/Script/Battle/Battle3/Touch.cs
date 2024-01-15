@@ -8,6 +8,7 @@ public class Touch : MonoBehaviour
     public float indication_time;
     public GameObject target;
     public static bool click;
+    public GameObject Attackefect;
 
     private AudioSource audioSource;
     [SerializeField] private AudioClip se1;
@@ -53,6 +54,8 @@ public class Touch : MonoBehaviour
                 B3cnt--;
                 hpcnt++;
                 audioSource.PlayOneShot(se1);
+                Attackefect.SetActive(true);
+                Invoke("hihyouzi", 1.0f);
             }
         }
         //else
@@ -84,6 +87,12 @@ public class Touch : MonoBehaviour
         else if (direction.obstacles == true || Touch.click == true)
         {
             clickGameObject.SetActive(false);
+            
         }
     }    
+
+    void hihyouzi()
+    {
+        Attackefect.SetActive(false);
+    }
 }
