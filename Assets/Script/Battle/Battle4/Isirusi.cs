@@ -15,6 +15,7 @@ public class Isirusi : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        Iclearnum = 10;
     }
 
     // Update is called once per frame
