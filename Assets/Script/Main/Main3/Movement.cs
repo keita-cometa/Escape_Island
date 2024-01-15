@@ -65,7 +65,7 @@ public class Movement : MonoBehaviour
             input = target.position - transform.position;
             //Debug.Log(target.position + "taget");
             //Debug.Log(transform.position + "enemy");
-            Debug.Log(input + "kyori");
+            //Debug.Log(input + "kyori");
 
 
             //if (transform.position == RightUP || transform.position == LeftUP)
@@ -80,7 +80,7 @@ public class Movement : MonoBehaviour
             //éÂêlåˆÇ©ÇÁì¶Ç∞ÇÈà⁄ìÆ
             if ((-4<=input.x&&input.x<=4)&&(-4<=input.y&&input.y<=4))
             {
-                Debug.Log("nigeru");
+                //Debug.Log("nigeru");
                 if (target.position == transform.position)
                 {
                     //transform.localScale = transform.localScale;//âÊëúÇÕÇªÇÃÇ‹Ç‹
@@ -88,7 +88,7 @@ public class Movement : MonoBehaviour
                 }
                 else if (input.x >= input.y && input.x > 0)
                 {
-                    Debug.Log("xÇ›Ç¨");
+                    //Debug.Log("xÇ›Ç¨");
                     pos.x -= 2.0f;
                     pos.y += 0.0f;
                     LEFT = true;
@@ -96,7 +96,7 @@ public class Movement : MonoBehaviour
                 }
                 else if (input.x < input.y && input.x < 0)
                 {
-                    Debug.Log("xÇ–ÇæÇË");
+                    //Debug.Log("xÇ–ÇæÇË");
                     pos.x += 2.0f;
                     pos.y += 0.0f;
                     RIGHT = true;
@@ -104,14 +104,14 @@ public class Movement : MonoBehaviour
                 }
                 else if (input.x <= input.y && input.y > 0)
                 {
-                    Debug.Log("yÇ§Ç¶");
+                    //Debug.Log("yÇ§Ç¶");
                     pos.x += 0.0f;
                     pos.y -= 2.0f;
                     DOWN = true;
                 }
                 else if (input.x > input.y && input.y < 0)
                 {
-                    Debug.Log("yÇµÇΩ");
+                    //Debug.Log("yÇµÇΩ");
                     pos.x += 0.0f;
                     pos.y += 2.0f;
                     UP = true;
@@ -123,7 +123,7 @@ public class Movement : MonoBehaviour
                 radvec = Random.Range(0, 4);
                 if (radvec==0)
                 {
-                    Debug.Log("xç∂");
+                    //Debug.Log("xç∂");
                     pos.x -= 2.0f;
                     pos.y += 0.0f;
                     LEFT = true;
@@ -131,7 +131,7 @@ public class Movement : MonoBehaviour
                 }
                 else if (radvec==1)
                 {
-                    Debug.Log("xÇ›Ç¨");
+                    //Debug.Log("xÇ›Ç¨");
                     pos.x += 2.0f;
                     pos.y += 0.0f;
                     RIGHT = true;
@@ -139,14 +139,14 @@ public class Movement : MonoBehaviour
                 }
                 else if (radvec==2)
                 {
-                    Debug.Log("yÇµÇΩ");
+                    //Debug.Log("yÇµÇΩ");
                     pos.x += 0.0f;
                     pos.y -= 2.0f;
                     DOWN = true;
                 }
                 else if (radvec==3)
                 {
-                    Debug.Log("yÇ§Ç¶");
+                    //Debug.Log("yÇ§Ç¶");
                     pos.x += 0.0f;
                     pos.y += 2.0f;
                     UP = true;

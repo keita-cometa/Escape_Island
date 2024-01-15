@@ -15,6 +15,7 @@ public class Ssirusi : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        Sclearnum = 10;
     }
 
     // Update is called once per frame

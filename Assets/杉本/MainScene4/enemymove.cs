@@ -50,9 +50,9 @@ public class enemymove : MonoBehaviour
 
             //Vector2 direction;
             input = target.position - transform.position;
-            Debug.Log(target.position + "taget");
-            Debug.Log(transform.position + "enemy");
-            Debug.Log(input + "kyori");
+            //Debug.Log(target.position + "taget");
+            //Debug.Log(transform.position + "enemy");
+            //Debug.Log(input + "kyori");
 
 
             if(target.position==transform.position)
@@ -62,27 +62,27 @@ public class enemymove : MonoBehaviour
             }
             if (input.x >= input.y && input.x > 0) 
             {
-                Debug.Log("x‚Ý‚¬");
+                //Debug.Log("x‚Ý‚¬");
                 pos.x += 2.0f;
                 pos.y += 0.0f;
                 transform.localScale = new Vector2(-0.3f, 0.3f);  //‰æ‘œ”½“]
             }
             else if (input.x < input.y && input.x < 0)
             {
-                Debug.Log("x‚Ð‚¾‚è");
+                //Debug.Log("x‚Ð‚¾‚è");
                 pos.x -= 2.0f;
                 pos.y += 0.0f;
                 transform.localScale = new Vector2(0.3f, 0.3f);  //‰æ‘œ”½“]
             }
             else if (input.x <= input.y && input.y > 0)
             {
-                Debug.Log("y‚¤‚¦");
+                //Debug.Log("y‚¤‚¦");
                 pos.x += 0.0f;
                 pos.y += 2.0f;
             }
             else if (input.x > input.y && input.y < 0)
             {
-                Debug.Log("y‚µ‚½");
+                //Debug.Log("y‚µ‚½");
                 pos.x += 0.0f;
                 pos.y -= 2.0f;
             }
