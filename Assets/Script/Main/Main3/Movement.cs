@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Prime31.TransitionKit;
 
 public class Movement : MonoBehaviour
 {
@@ -286,7 +287,13 @@ public class Movement : MonoBehaviour
     }
     void encount()
     {
-        SceneManager.LoadScene("BattleScene3");
+        var wind = new WindTransition()
+        {
+            nextScene = 8,//シーンインデックスナンバーをそのまま代入
+            duration = 1.0f,
+            size = 0.3f
+        };
+        TransitionKit.instance.transitionWithDelegate(wind);
         ChangeScene1.posnum = 0;
         ChangeScene1.batnum = 3;
         PlayerController.stop = false;

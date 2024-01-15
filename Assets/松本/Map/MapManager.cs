@@ -16,6 +16,7 @@ public class MapManager : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        //GameManager.ClearFlg = false;
     }
 
     // Update is called once per frame
