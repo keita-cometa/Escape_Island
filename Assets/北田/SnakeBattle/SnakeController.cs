@@ -14,6 +14,7 @@ public class SnakeController : MonoBehaviour
 
     int radpos;//Ä¶¬êŠ
     public GameObject clickedGameObject;//‚µ‚é‚µ
+    public GameObject yaa;//–î
 
     //SE
     private AudioSource audioSource;
@@ -39,6 +40,8 @@ public class SnakeController : MonoBehaviour
             audioSource.PlayOneShot(se);
             Invoke("hyouzi", 3.0f);
             Ssirusi.sign = false;
+            yaa.SetActive(true);
+            Invoke("hihyouzi", 1.0f);
         }
 
         //Ös‚Ì•’²®
@@ -152,5 +155,9 @@ public class SnakeController : MonoBehaviour
     {
         clickedGameObject.SetActive(true);
         
+    }
+    void hihyouzi()
+    {
+        yaa.SetActive(false);
     }
 }
