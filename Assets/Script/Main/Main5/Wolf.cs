@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Prime31.TransitionKit;
 
 public class Wolf : MonoBehaviour
 {
@@ -36,7 +37,12 @@ public class Wolf : MonoBehaviour
 
     void Load()
     {
-        SceneManager.LoadScene(sceneName);
+        var slices = new TriangleSlicesTransition()
+        {
+            nextScene = 12,//シーンインデックスナンバーをそのまま代入
+            divisions = Random.Range(2, 10)
+        };
+        TransitionKit.instance.transitionWithDelegate(slices);
         ChangeScene1.batnum = 6;
         ChangeScene1.posnum = 0;
         PlayerController.stop = false;

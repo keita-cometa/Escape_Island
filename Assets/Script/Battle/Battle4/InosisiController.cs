@@ -13,6 +13,7 @@ public class InosisiController : MonoBehaviour
     public GameObject clickedGameObject;
     public Renderer InosisiSprite;
     public Renderer sirusiSprite;
+    public GameObject yaaa;//–î
 
     private AudioSource audioSource;
     [SerializeField] private AudioClip se;
@@ -37,6 +38,8 @@ public class InosisiController : MonoBehaviour
             audioSource.PlayOneShot(se);
             Invoke("hyouzi", 2.0f);
             Isirusi.sign = false;
+            yaaa.SetActive(true);
+            Invoke("hihyouzi", 1.0f);
         }
         
         pos = transform.position;
@@ -110,6 +113,11 @@ public class InosisiController : MonoBehaviour
     void hyouzi()
     {
         clickedGameObject.SetActive(true);
+    }
+
+    void hihyouzi()
+    {
+        yaaa.SetActive(false);
     }
 
     //private void OnTriggerEnter2D(Collider2D collision)

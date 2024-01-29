@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Prime31.TransitionKit;
 
 public class enemymove : MonoBehaviour
 {
@@ -153,7 +154,13 @@ public class enemymove : MonoBehaviour
     }
     void encount()
     {
-        SceneManager.LoadScene("InosisiBattle");
+        var wind = new WindTransition()
+        {
+            nextScene = 10,//シーンインデックスナンバーをそのまま代入
+            duration = 1.0f,
+            size = 0.3f
+        };
+        TransitionKit.instance.transitionWithDelegate(wind);
         ChangeScene1.batnum = 4;
         PlayerController.stop = false;
         ChangeScene1.posnum = 0;
