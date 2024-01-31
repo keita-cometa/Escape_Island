@@ -9,6 +9,8 @@ public class BowButton : MonoBehaviour
     public GameObject Button;
     public GameObject Yazirusi;
     public GameObject M_back;   //ミニゲーム用背景
+    public GameObject Minigame;   //ミニゲーム用
+    public GameObject M_UI;   //ミニゲーム用UI
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +37,7 @@ public class BowButton : MonoBehaviour
         Yazirusi.SetActive(true);
         GameManager.BowFlg = true;
         M_back.SetActive(true);
-
+        M_UI.SetActive(true);
         Invoke("hide",2.0f);
     }
 

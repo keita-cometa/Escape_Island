@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 323034991522045005}
   - component: {fileID: 323034991522045006}
   - component: {fileID: 2772892263785295664}
+  - component: {fileID: -5195969957729444880}
   m_Layer: 0
   m_Name: "\u30C8\u30F3\u30AB\u30C1\u67A0\u7DDA\u3042\u308A "
   m_TagString: Tonkachi
@@ -123,3 +124,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-5195969957729444880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323034991522044995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19d4130f565594547b833dfbc205e621, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 323034991522044995}
+  speed: -3

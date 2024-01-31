@@ -1,13 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class timing : MonoBehaviour
 {
     bool Pushkey = false;
     public GameObject obj;
     public GameObject[] destroyobj;
-    bool[] objflag = { false,false,false };
+    bool[] objflag = { false, false, false };
+
+    static public int Mclear_cnt = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,13 +42,13 @@ public class timing : MonoBehaviour
     {
         if (collision.CompareTag("Tonkachi") && objflag[0] == true)
         {
-            if (Input.GetKey(KeyCode.Return) )
+            if (Input.GetKey(KeyCode.Return))
             {
                 if (Pushkey == false)
                 {
                     Pushkey = true;
-                    Debug.Log("Down" + Pushkey);
                     Destroy(destroyobj[0]);
+                    CraftMain.MCrear--;
                 }               
             }
             else
