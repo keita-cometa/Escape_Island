@@ -185,6 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cnt: 0
+  wind: 0
   windFlg: 0
 --- !u!61 &1567846182412264370
 BoxCollider2D:

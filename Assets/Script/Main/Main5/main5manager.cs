@@ -18,10 +18,11 @@ public class main5manager : MonoBehaviour
         kirakira.SetActive(true);
         wolfs.SetActive(true);
         main3yazirusi.SetActive(false);
-        main4yazirusi.SetActive(true);
+        main4yazirusi.SetActive(false);
         if(GameManager.Battele5Flg)
         {
             wolfs.SetActive(false);
+            main4yazirusi.SetActive(true);
         }
         if (GameManager.GasFlg)
         {

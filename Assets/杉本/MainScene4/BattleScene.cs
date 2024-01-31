@@ -7,6 +7,9 @@ using Prime31.TransitionKit;
 public class BattleScene : MonoBehaviour
 {
     public string sceneName;//ì«Ç›çûÇﬁÉVÅ[Éìñº
+
+    Color fadeColor = Color.black;
+    float fadespeed = 1.0f;
     //public static bool movestop=false;
 
     private AudioSource audioSource;
@@ -33,7 +36,7 @@ public class BattleScene : MonoBehaviour
             duration = 1.0f,
             size = 0.3f
         };
-        TransitionKit.instance.transitionWithDelegate(wind);
+        Initiate.Fade(sceneName, fadeColor, fadespeed);
         ChangeScene1.batnum = 5;
         ChangeScene1.posnum = 0;
         PlayerController.stop = false;

@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask WallLayer;//WallLayerを設定
 
     Vector2 input;
+    bool flag;
 
     //移動スピード
     [SerializeField] float moveSpeed;
@@ -74,6 +75,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        flag = stop;
         //移動制御
         // 移動中だと入力を受け付けない
         if (!isMoving && stop == false)

@@ -6413,6 +6413,7 @@ MonoBehaviour:
   moveSpeed: 1.5
   boar: {fileID: 1943440322}
   se: {fileID: 8300000, guid: 52fe87dbccc5fb84dbd6f482fd17c66d, type: 3}
+  sceneName: InosisiBattle
 --- !u!82 &1943440328
 AudioSource:
   m_ObjectHideFlags: 0

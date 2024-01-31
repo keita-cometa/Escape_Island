@@ -979,7 +979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e9c83b0612d85f458e8eac32276d519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  num: 1
+  num: -1
   speed: 4
   updown: 0
   clickedGameObject: {fileID: 1379620833}

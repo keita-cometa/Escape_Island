@@ -11,7 +11,7 @@ public class NextAreayazirusi : MonoBehaviour
     void Start()
     {
         NextAreaButton.SetActive(false);
-        yazirusi.SetActive(false);
+        
     }
 
     // Update is called once per frame

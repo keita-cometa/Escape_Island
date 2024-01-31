@@ -25,6 +25,11 @@ public class enemymove : MonoBehaviour
     private AudioSource audioSource;
     [SerializeField] private AudioClip se;
 
+    public string sceneName;//ì«Ç›çûÇﬁÉVÅ[Éìñº
+
+    Color fadeColor = Color.black;
+    float fadespeed = 1.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -160,7 +165,7 @@ public class enemymove : MonoBehaviour
             duration = 1.0f,
             size = 0.3f
         };
-        TransitionKit.instance.transitionWithDelegate(wind);
+        Initiate.Fade(sceneName, fadeColor, fadespeed);
         ChangeScene1.batnum = 4;
         PlayerController.stop = false;
         ChangeScene1.posnum = 0;

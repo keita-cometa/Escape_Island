@@ -5248,6 +5248,7 @@ MonoBehaviour:
     m_Bits: 64
   moveSpeed: 1.5
   se: {fileID: 8300000, guid: 8f53f88d984f33849bf794a8273c0bb1, type: 3}
+  sceneName: BattleScene3
 --- !u!61 &1952291607
 BoxCollider2D:
   m_ObjectHideFlags: 0
