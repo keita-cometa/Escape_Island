@@ -8,6 +8,10 @@ public class WolfHPmanager : MonoBehaviour
     public GameObject Wolf2;
     public GameObject Wolf3;
 
+    public GameObject ya1;
+    public GameObject ya2;
+    public GameObject ya3;
+
     public static int WolfHP1=10;
     public static int WolfHP2=10;
     public static int WolfHP3=10;
@@ -61,33 +65,27 @@ public class WolfHPmanager : MonoBehaviour
         //wolf1Effect.hiteffect();
         WolfHP1--;
         wolf1 = WolfHP1;
-        if (WolfHP1 == 0)
-        {
-            Wolf1.SetActive(false);
-            WolfManager.wolfnum++;
-        }
+        ya1.SetActive(true);
+        Invoke("hihyouzi1", 1.0f);
+        
     }
     public void Damage2()
     {
         //wolf2Effect.hiteffect();
         WolfHP2--;
         wolf2 = WolfHP2;
-        if (WolfHP2 == 0)
-        {
-            Wolf2.SetActive(false);
-            WolfManager.wolfnum++;
-        }
+        ya2.SetActive(true);
+        Invoke("hihyouzi2", 1.0f);
+       
     }
     public void Damage3()
     {
         //wolf3Effect.hiteffect();
         WolfHP3--;
         wolf3 = WolfHP3;
-        if (WolfHP3 == 0)
-        {
-            Wolf3.SetActive(false);
-            WolfManager.wolfnum++;
-        }
+        ya3.SetActive(true);
+        Invoke("hihyouzi3", 1.0f);
+        
     }
     public void missSE()
     {
@@ -101,4 +99,33 @@ public class WolfHPmanager : MonoBehaviour
     {
         audioSource.PlayOneShot(se3);
     }
+    
+    void hihyouzi1()
+    {
+        ya1.SetActive(false);
+        if (WolfHP1 == 0)
+        {
+            Wolf1.SetActive(false);
+            WolfManager.wolfnum++;
+        }
+    }
+    void hihyouzi2()
+    {
+        ya2.SetActive(false);
+        if (WolfHP2 == 0)
+        {
+            Wolf2.SetActive(false);
+            WolfManager.wolfnum++;
+        }
+    }
+    void hihyouzi3()
+    {
+        ya3.SetActive(false);
+        if (WolfHP3 == 0)
+        {
+            Wolf3.SetActive(false);
+            WolfManager.wolfnum++;
+        }
+    }
+
 }

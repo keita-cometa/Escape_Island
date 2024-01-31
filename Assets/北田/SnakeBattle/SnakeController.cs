@@ -5,7 +5,7 @@ using UnityEngine;
 public class SnakeController : MonoBehaviour
 {
     private Vector2 pos;
-    public int num = 1;
+    public int num = -1;
     public float speed=4;
     public float updown=0;
     float rad;
@@ -14,6 +14,7 @@ public class SnakeController : MonoBehaviour
 
     int radpos;//再生成場所
     public GameObject clickedGameObject;//しるし
+    public GameObject yaa;//矢
 
     //SE
     private AudioSource audioSource;
@@ -39,6 +40,8 @@ public class SnakeController : MonoBehaviour
             audioSource.PlayOneShot(se);
             Invoke("hyouzi", 3.0f);
             Ssirusi.sign = false;
+            yaa.SetActive(true);
+            Invoke("hihyouzi", 1.0f);
         }
 
         //蛇行の幅調整
@@ -51,23 +54,36 @@ public class SnakeController : MonoBehaviour
         //現在位置保存
         pos = transform.position;
 
-        // （ポイント）マイナスをかけることで逆方向に移動する。
-        transform.Translate(transform.right * Time.deltaTime * speed * num);
-        transform.Translate(transform.up * Time.deltaTime * speed * updown);
-        if (pos.x > -2)
+        //左から右に蛇行しながら移動する。
+        if(Ssirusi.Sclearnum > 3)
         {
-            num = -1;
+            transform.Translate(transform.right * Time.deltaTime * speed * num);//横方向
+            transform.Translate(transform.up * Time.deltaTime * speed * updown);//縦方向
         }
-        if(pos.x<0&&kirikae==false)
+        else
         {
-            num = Random.Range(-1, 1);
-            kirikae = true;
+            num = 1;
+            transform.Translate(transform.right * Time.deltaTime * speed * num);//横方向
+            transform.Translate(transform.up * Time.deltaTime * speed * updown);//縦方向
         }
+
+        if (Ssirusi.Sclearnum <= 3)
+            transform.localScale = new Vector2(-0.3f, 0.3f);  //画像反転
+
+        //if (pos.x > -2)
+        //{
+        //    num = -1;
+        //}
+        //if (pos.x < 0 && kirikae == false)
+        //{
+        //    num = Random.Range(-1, 1);
+        //    kirikae = true;
+        //}
         updown = Mathf.Sin(rad);
         if(pos.x<-12)
         {
             radpos = Random.Range(1, 5);
-            //赤ならテレポート
+            //左から右にテレポート
             if (radpos == 1)
                     snake1.localPosition = new Vector2(11, 2);
             if (radpos == 2)
@@ -78,9 +94,23 @@ public class SnakeController : MonoBehaviour
                     snake1.localPosition = new Vector2(11, -3);
             kirikae = false;
         }
+        if(pos.x>13)
+        {
+            radpos = Random.Range(1, 5);
+            //右から左にテレポート
+            if (radpos == 1)
+                snake1.localPosition = new Vector2(-11, 2);
+            if (radpos == 2)
+                snake1.localPosition = new Vector2(-11, 0);
+            if (radpos == 3)
+                snake1.localPosition = new Vector2(-11, -2);
+            if (radpos == 4)
+                snake1.localPosition = new Vector2(-11, -3);
+        }
         
         if(pos.y>5)
         {
+            //上に行き過ぎると左にテレポート
             radpos = Random.Range(1, 5);
             if (radpos == 1)
                 snake1.localPosition = new Vector2(11, 2);
@@ -94,6 +124,7 @@ public class SnakeController : MonoBehaviour
         }
         if(pos.y<-7)
         {
+            //下に行き過ぎると左にテレポート
             radpos = Random.Range(1, 5);
             if (radpos == 1)
                 snake1.localPosition = new Vector2(11, 2);
@@ -152,5 +183,9 @@ public class SnakeController : MonoBehaviour
     {
         clickedGameObject.SetActive(true);
         
+    }
+    void hihyouzi()
+    {
+        yaa.SetActive(false);
     }
 }

@@ -40,6 +40,11 @@ public class Movement : MonoBehaviour
     //bool kadoueFlg;
     //bool kadositaFlg;
 
+    public string sceneName;//ì«Ç›çûÇﬁÉVÅ[Éìñº
+
+    Color fadeColor = Color.black;
+    float fadespeed = 1.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +54,7 @@ public class Movement : MonoBehaviour
         }
         anim = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
+        PlayerController.stop = false;
     }
 
     // Update is called once per frame
@@ -293,9 +299,9 @@ public class Movement : MonoBehaviour
             duration = 1.0f,
             size = 0.3f
         };
-        TransitionKit.instance.transitionWithDelegate(wind);
+        Initiate.Fade(sceneName, fadeColor, fadespeed);
         ChangeScene1.posnum = 0;
         ChangeScene1.batnum = 3;
-        PlayerController.stop = false;
+        //PlayerController.stop = false;
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Prime31.TransitionKit;
 
 public class enemymove : MonoBehaviour
 {
@@ -23,6 +24,11 @@ public class enemymove : MonoBehaviour
 
     private AudioSource audioSource;
     [SerializeField] private AudioClip se;
+
+    public string sceneName;//読み込むシーン名
+
+    Color fadeColor = Color.black;
+    float fadespeed = 1.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -153,7 +159,13 @@ public class enemymove : MonoBehaviour
     }
     void encount()
     {
-        SceneManager.LoadScene("InosisiBattle");
+        var wind = new WindTransition()
+        {
+            nextScene = 10,//シーンインデックスナンバーをそのまま代入
+            duration = 1.0f,
+            size = 0.3f
+        };
+        Initiate.Fade(sceneName, fadeColor, fadespeed);
         ChangeScene1.batnum = 4;
         PlayerController.stop = false;
         ChangeScene1.posnum = 0;

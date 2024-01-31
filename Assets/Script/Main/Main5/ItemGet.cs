@@ -25,7 +25,7 @@ public class ItemGet : MonoBehaviour
     public void UI()
     {
         GetText.SetActive(true);
-        Invoke("Hidden", 4.0f);
+        Invoke("Hidden", 2.0f);
         GameManager.GasFlg = true;
         //audioSource.PlayOneShot(se);
     }
