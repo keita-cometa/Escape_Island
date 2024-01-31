@@ -7,7 +7,7 @@ public class BowButton : MonoBehaviour
 {
     public GameObject itemtext;
     public GameObject Button;
-    public GameObject Yazirusi;
+    public GameObject Yazirusi;//メイン3に行く矢印
     public GameObject M_back;   //ミニゲーム用背景
     public GameObject Minigame;   //ミニゲーム用
     public GameObject M_UI;   //ミニゲーム用UI
@@ -36,9 +36,12 @@ public class BowButton : MonoBehaviour
         Button.SetActive(false);
         Yazirusi.SetActive(true);
         GameManager.BowFlg = true;
+        //ミニゲーム開始
         M_back.SetActive(true);
         M_UI.SetActive(true);
         Invoke("hide",2.0f);
+
+        PlayerController.stop = true;
     }
 
     void hide()

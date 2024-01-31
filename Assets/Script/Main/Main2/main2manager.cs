@@ -5,6 +5,8 @@ using UnityEngine;
 public class main2manager : MonoBehaviour
 {
     public GameObject main3yazirusi;
+    public GameObject bowtext;
+    public GameObject handletext;
 
     // Start is called before the first frame update
     void Start()
@@ -19,5 +21,14 @@ public class main2manager : MonoBehaviour
         {
             main3yazirusi.SetActive(true);
         }
+        if(CraftMain.MCrearFlag)
+        {
+            Invoke("Btext", 4.0f);
+        }
+    }
+
+    void Btext()
+    {
+        bowtext.SetActive(false);
     }
 }

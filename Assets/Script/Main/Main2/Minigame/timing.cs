@@ -13,10 +13,15 @@ public class timing : MonoBehaviour
 
     static public int Mclear_cnt = 0;
 
+    //オーディオ
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip se;
+
     // Start is called before the first frame update
     void Start()
     {
         //Pushkey = false;
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -49,7 +54,8 @@ public class timing : MonoBehaviour
                     Pushkey = true;
                     Destroy(destroyobj[0]);
                     CraftMain.MCrear--;
-                }               
+                    audioSource.PlayOneShot(se);
+                }
             }
             else
                 Pushkey = false;
