@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class StartC : MonoBehaviour
 {
     public static bool onclick=false;//クリックされたかどうか判別変数
-    public static bool starttf=false;
+    public static bool starttf=false;//開始時間表示用
 
     public GameObject StartBotton;//スタートボタン
     public GameObject StartTimeText;//スタートタイムテキスト

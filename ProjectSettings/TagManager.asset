@@ -11,6 +11,16 @@ TagManager:
   - weak2
   - weak3
   - sirusi
+  - Obstacles
+  - wall
+  - Ground
+  - Tonkachi
+  - T0
+  - T1
+  - T2
+  - T3
+  - T4
+  - target
   layers:
   - Default
   - TransparentFX
