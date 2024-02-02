@@ -34,6 +34,6 @@ public class UImanager : MonoBehaviour
     void End()
     {
         titleButton.SetActive(true);
-        Omake.SetActive(true);
+        //Omake.SetActive(true);
     }
 }
