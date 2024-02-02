@@ -5,6 +5,8 @@ using UnityEngine;
 public class menu : MonoBehaviour
 {
     public GameObject Panel;
+    public GameObject yumiya;
+    public GameObject handle;
     public bool Menuflg=false;
 
     // Start is called before the first frame update
@@ -25,6 +27,14 @@ public class menu : MonoBehaviour
             {
             Panel.SetActive(false);
             Menuflg = false;
+        }
+        if(GameManager.BowFlg)
+        {
+            yumiya.SetActive(false);
+        }
+        if(GameManager.HandleFlg)
+        {
+            handle.SetActive(false);
         }
     }
     void time()

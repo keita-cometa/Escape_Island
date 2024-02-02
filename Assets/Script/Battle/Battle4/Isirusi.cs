@@ -38,7 +38,7 @@ public class Isirusi : MonoBehaviour
                 {
                     clickedGameObject.SetActive(false);
                     sign = true;
-                    Iclearnum--;
+                    Invoke("gennsyo", 1.0f);
                     Debug.Log("hit");
                 }
             }
@@ -47,5 +47,10 @@ public class Isirusi : MonoBehaviour
                 audioSource.PlayOneShot(se);
             }
         }
+    }
+
+    void gennsyo()
+    {
+        Iclearnum--;
     }
 }

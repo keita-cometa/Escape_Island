@@ -48,7 +48,7 @@ public class Wolf : MonoBehaviour
         Initiate.Fade(sceneName, fadeColor, fadespeed);
         ChangeScene1.batnum = 6;
         ChangeScene1.posnum = 0;
-        PlayerController.stop = false;
+        //PlayerController.stop = false;
     }
 
 }

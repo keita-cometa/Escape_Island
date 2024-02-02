@@ -38,7 +38,7 @@ public class Ssirusi : MonoBehaviour
                 {
                     clickedGameObject.SetActive(false);
                     sign = true;
-                    Sclearnum--;
+                    Invoke("gennsyo", 1.0f);
                     Debug.Log("hit");
                 }
                 else
@@ -51,5 +51,10 @@ public class Ssirusi : MonoBehaviour
                 audioSource.PlayOneShot(se);
             }
         }
+    }
+
+    void gennsyo()
+    {
+        Sclearnum--;
     }
 }

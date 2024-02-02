@@ -51,8 +51,7 @@ public class Touch : MonoBehaviour
                 Debug.Log("cilck");
                 click = true;
                 StartCoroutine(Indication());
-                B3cnt--;
-                hpcnt++;
+                
                 audioSource.PlayOneShot(se1);
                 Attackefect.SetActive(true);
                 Invoke("hihyouzi", 1.0f);
@@ -93,6 +92,8 @@ public class Touch : MonoBehaviour
 
     void hihyouzi()
     {
+        B3cnt--;
+        hpcnt++;
         Attackefect.SetActive(false);
     }
 }

@@ -5614,6 +5614,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Panel: {fileID: 805472371}
+  yumiya: {fileID: 1118822976}
+  handle: {fileID: 1165708226}
   Menuflg: 0
 --- !u!1 &1997794484
 GameObject:
