@@ -43,6 +43,7 @@ public class HandleButton : MonoBehaviour
             M_UI.SetActive(true);
             Invoke("hide",2.0f);
             handleflg = true;
+            PlayerController.stop = true;
         }
         else
         {
