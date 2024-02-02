@@ -11,6 +11,7 @@ public class main2manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        CraftMain.MCrearFlag = false;
         main3yazirusi.SetActive(false);
     }
 
@@ -21,14 +22,26 @@ public class main2manager : MonoBehaviour
         {
             main3yazirusi.SetActive(true);
         }
-        if(CraftMain.MCrearFlag)
+        if(CraftMain.MCrearFlag&&BowButton.bowflg)
         {
             Invoke("Btext", 4.0f);
+        }
+        if (CraftMain.MCrearFlag && HandleButton.handleflg)
+        {
+            Invoke("Htext", 4.0f);
         }
     }
 
     void Btext()
     {
+        Debug.Log("btext");
         bowtext.SetActive(false);
+        BowButton.bowflg = false;
+    }
+    void Htext()
+    {
+        Debug.Log("htext");
+        handletext.SetActive(false);
+        HandleButton.handleflg = false;
     }
 }

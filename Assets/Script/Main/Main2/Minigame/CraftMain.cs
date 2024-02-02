@@ -10,11 +10,13 @@ public class CraftMain : MonoBehaviour
     public GameObject MinigameImg;//クラフト画面
     public GameObject clear;//クリア画像
 
-    public GameObject gettext;
+    public GameObject Bgettext;
+    public GameObject Hgettext;
     // Start is called before the first frame update
     void Start()
     {
-        
+        MCrear = 10;
+        MCrearFlag = false;
     }
 
     // Update is called once per frame
@@ -33,7 +35,17 @@ public class CraftMain : MonoBehaviour
         craftCanvas.SetActive(false);
         MinigameImg.SetActive(false);
         clear.SetActive(false);
-        gettext.SetActive(true);
+        if(BowButton.bowflg)
+        {
+            Bgettext.SetActive(true);
+            
+        }
+        if(HandleButton.handleflg)
+        {
+            Hgettext.SetActive(true);
+            
+        }
+        
         PlayerController.stop = false;//クラフト中はプレイヤーを止める
     }
 }

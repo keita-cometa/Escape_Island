@@ -39,7 +39,7 @@ public class BattleScene : MonoBehaviour
         Initiate.Fade(sceneName, fadeColor, fadespeed);
         ChangeScene1.batnum = 5;
         ChangeScene1.posnum = 0;
-        PlayerController.stop = false;
+        //PlayerController.stop = false;
     }
 
     // Update is called once per frame

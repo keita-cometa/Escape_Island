@@ -167,7 +167,7 @@ public class enemymove : MonoBehaviour
         };
         Initiate.Fade(sceneName, fadeColor, fadespeed);
         ChangeScene1.batnum = 4;
-        PlayerController.stop = false;
+        //PlayerController.stop = false;
         ChangeScene1.posnum = 0;
     }
 }

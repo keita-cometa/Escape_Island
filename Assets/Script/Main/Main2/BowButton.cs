@@ -12,6 +12,8 @@ public class BowButton : MonoBehaviour
     public GameObject Minigame;   //ミニゲーム用
     public GameObject M_UI;   //ミニゲーム用UI
 
+    public static bool bowflg;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +43,7 @@ public class BowButton : MonoBehaviour
         M_UI.SetActive(true);
         Invoke("hide",2.0f);
 
+        bowflg = true;
         PlayerController.stop = true;
     }
 

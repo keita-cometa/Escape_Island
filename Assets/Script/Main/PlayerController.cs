@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        stop = false;
+        
 
         if(ChangeScene1.posnum==1)
         {
@@ -188,4 +188,8 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void OnDestroy()
+    {
+        stop = false;
+    }
 }
