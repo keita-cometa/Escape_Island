@@ -34,6 +34,7 @@ public class WolfManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        wolfnum = 0;
         movePosition = moveRandomPosition();//オブジェクトの目的地を設定
         anim = GetComponent<Animator>();
         if(GameManager.Hellmode)
