@@ -25,7 +25,7 @@ public class snakeclear : MonoBehaviour
     void FixedUpdate()
     {
         //目標個数表示
-        Goaltext.text = Ssirusi.Sclearnum.ToString("0");
+        //Goaltext.text = Ssirusi.Sclearnum.ToString("0");
 
         //goalnumが0になったらクリア関数を呼び出す
         if (Ssirusi.Sclearnum == 0)

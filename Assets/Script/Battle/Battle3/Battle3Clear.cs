@@ -29,7 +29,7 @@ public class Battle3Clear : MonoBehaviour
     void Update()
     {
         //目標個数表示
-        Goaltext.text = Touch.B3cnt.ToString("0");
+        //Goaltext.text = Touch.B3cnt.ToString("0");
 
         //goalnumが0になったらクリア関数を呼び出す
         if (Touch.B3cnt == 0)

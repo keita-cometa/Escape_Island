@@ -63,8 +63,7 @@ public class WolfHPmanager : MonoBehaviour
     public void Damage1()
     {
         //wolf1Effect.hiteffect();
-        WolfHP1--;
-        wolf1 = WolfHP1;
+        
         ya1.SetActive(true);
         Invoke("hihyouzi1", 1.0f);
         
@@ -72,8 +71,7 @@ public class WolfHPmanager : MonoBehaviour
     public void Damage2()
     {
         //wolf2Effect.hiteffect();
-        WolfHP2--;
-        wolf2 = WolfHP2;
+        
         ya2.SetActive(true);
         Invoke("hihyouzi2", 1.0f);
        
@@ -81,8 +79,7 @@ public class WolfHPmanager : MonoBehaviour
     public void Damage3()
     {
         //wolf3Effect.hiteffect();
-        WolfHP3--;
-        wolf3 = WolfHP3;
+        
         ya3.SetActive(true);
         Invoke("hihyouzi3", 1.0f);
         
@@ -102,6 +99,8 @@ public class WolfHPmanager : MonoBehaviour
     
     void hihyouzi1()
     {
+        WolfHP1--;
+        wolf1 = WolfHP1;
         ya1.SetActive(false);
         if (WolfHP1 == 0)
         {
@@ -111,6 +110,8 @@ public class WolfHPmanager : MonoBehaviour
     }
     void hihyouzi2()
     {
+        WolfHP2--;
+        wolf2 = WolfHP2;
         ya2.SetActive(false);
         if (WolfHP2 == 0)
         {
@@ -120,6 +121,8 @@ public class WolfHPmanager : MonoBehaviour
     }
     void hihyouzi3()
     {
+        WolfHP3--;
+        wolf3 = WolfHP3;
         ya3.SetActive(false);
         if (WolfHP3 == 0)
         {

@@ -9,6 +9,7 @@ public class BossGameManager : MonoBehaviour
     public GameObject ClearUI;
     private AudioSource audioSource;
     [SerializeField] private AudioClip se;
+    public int num;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +19,8 @@ public class BossGameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(WolfManager.wolfnum==3)
+        num = WolfManager.wolfnum;
+        if (WolfManager.wolfnum==3)
         {
             ClearUI.SetActive(true);
             audioSource.PlayOneShot(se);

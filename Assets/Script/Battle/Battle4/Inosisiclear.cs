@@ -24,7 +24,7 @@ public class Inosisiclear : MonoBehaviour
     void Update()
     {
         //目標個数表示
-        Goaltext.text = Isirusi.Iclearnum.ToString("0");
+        //Goaltext.text = Isirusi.Iclearnum.ToString("0");
 
         //goalnumが0になったらクリア関数を呼び出す
         if (Isirusi.Iclearnum == 0)
